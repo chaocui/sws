@@ -58,14 +58,24 @@ int main(int argc, char **argv){
 		exit(1);
 	}
 
-	char buf[1024];
-
-	if(read(sockfd,buf,1024) < 0){
-		fprintf("stderr", "Reading from socket error");
+	if(listen(sockfd,10) == -1){
+		fprintf(stderr,"listen error");
 		exit(1);
-	}
+	}	
+
+	struct sockaddr remote;
+	int client_fd;
+	int receive;
+	int receiveb;
 	
-	printf("%s",buf);	
+	if((client_fd = accept(sockfd,(struct sockaddr*)&remote,&receive)) < 0){
+		fprintf(stderr,"accept error");
+		exit(1);
+	}	
+
+	char buf[1024];
+	if((receiveb = recv(client_fd,buf,sizeof(buf),1024)) > 0)	
+		printf("%s",buf);	
 
 	return 0;
 }
