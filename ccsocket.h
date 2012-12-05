@@ -2,12 +2,13 @@
 #include <netinet/in.h>
 #include <arpa/inet.h>
 
-struct sockaddr_in name;
+#define MAX_CONNECTION 10
 
 int init_listen(int i_flag, char *addr, int port);
 
 int init_listen(int i_flag, char *addr, int port){
 	int sockfd;
+	struct sockaddr_in name;
 	if((sockfd = socket(AF_INET,SOCK_STREAM,0)) < 0){
 		fprintf(stderr,"generate socket error\n");
 		exit(1);
@@ -25,7 +26,7 @@ int init_listen(int i_flag, char *addr, int port){
 		exit(1);
 	}
 
-	if(listen(sockfd,10) == -1){
+	if(listen(sockfd,MAX_CONNECTION) == -1){
 		fprintf(stderr,"listen error\n");
 		exit(1);
 	}

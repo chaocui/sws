@@ -88,7 +88,6 @@ int main(int argc, char **argv){
 		if((cid = fork()) == 0){	/*child process, handle the coming request*/
 			char cwd[MAX_LEN];
 			getcwd(cwd,sizeof(cwd));
-			printf("%s\n",cwd);
 			int receive_b;
 			receive_b = read(client_fd,buf,1024);
 			buf[receive_b] = '\0';
