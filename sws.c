@@ -69,6 +69,18 @@ int main(int argc, char **argv){
 		exit(1);	
 	}
 	
+	char server_root[MAX_LEN];
+	char cgi_root[MAX_LEN];
+	getcwd(server_root,sizeof(server_root));
+	
+	if(c_flag == 1){
+		if(chdir(CGI_dir) == -1){
+			fprintf(stderr,"CGI root error\nCheck the validation of the cgi root");
+			exit(1);
+		}
+		getcwd(cgi_root,sizeof(cgi_root));
+	}
+
 	int sockfd;
 	if((sockfd = init_listen(i_flag,addr,port)) < 0){
 		fprintf(stderr,"cannot start server\n");
@@ -86,15 +98,22 @@ int main(int argc, char **argv){
 		int cid;
 		char buf[1024];
 		if((cid = fork()) == 0){	/*child process, handle the coming request*/
-			char cwd[MAX_LEN];
-			getcwd(cwd,sizeof(cwd));
 			int receive_b;
 			receive_b = read(client_fd,buf,1024);
 			buf[receive_b] = '\0';
 			char method[MAX_LEN] = "", path[MAX_LEN] = "", protocol[MAX_LEN] = ""; 
 			sscanf(buf,"%s %s %s",method,path,protocol);
-			response(client_fd,method,path,protocol,cwd);
-	
+			
+			char cgi_check[9];
+			int i;
+			for(i = 0; i < 9; i++)
+				cgi_check[i] = path[i];
+
+			if(c_flag == 1 && strcmp(cgi_check,"/cgi_bin/") == 0)
+				cgi_response(client_fd,method,path,protocol,cgi_root);
+			else
+				response(client_fd,method,path,protocol,server_root);
+				
 			exit(0);
 		}
 		else{ 			/*parent process, waiting for new request*/
