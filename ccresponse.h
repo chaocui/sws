@@ -18,6 +18,16 @@
 #define GET 1
 #define VALID 1
 #define NOT_VALID 2
+#define CGI_LEN 9
+
+typedef struct s_node *Stack;
+typedef Stack Next;
+typedef Stack Top;
+
+struct s_node{
+	char component[MAX_LEN];
+	Next next;
+};
 
 /*
 * Generate the response time
@@ -38,6 +48,8 @@ void serverinfo(int client_fd);
 * @protoco, the request protocol
 */
 void do_process(char *path, char *method, int client_fd, char *protocol);
+
+void dir_process(int client_fd, struct stat stat_buf, char *method, char *path);
 
 /*
 * Validation the request URL
@@ -80,6 +92,7 @@ void response(int client_fd, char *method, char *path, char *protocol, char *ser
 */
 void cgi_response(int client_fd, char *method, char *path, char *protocol, char *cgi_root);
 
+void cgi_process(char *requestdir, int client_fd, char *path, char *protocol);
 /*
 * Header generater based on different status code
 * @client_fd, the web socket descriptor we will write data to
@@ -93,6 +106,10 @@ void cgi_response(int client_fd, char *method, char *path, char *protocol, char 
 	   Read the directory again and send the file names to the socket
 */
 void header(int client_fd,int status,struct stat stat_buf,int dirlen);
+
+void push(Stack node, Top top);
+Stack pop(Top top);
+void cc_realpath(char *requestdir, char *resolvedpath);
 
 void response(int client_fd, char *method, char *path, char *protocol, char *server_root){
 
@@ -137,10 +154,12 @@ int validation(char *requestdir, char *rootdir){
 	/*
 	* The realpath used to remove the .. and . in a path, to get the real absolute path
 	*/
-	char path[MAX_LEN];
-	realpath(requestdir,path);
+	char path[MAX_LEN] = "";
 	
-	//printf("real path: %s\n",path);
+	cc_realpath(requestdir,path);
+	
+	printf("requestdir: %s\n",requestdir);
+	printf("real path: %s\n",path);
 
 	/*
 	* Compare the path with root dir,
@@ -185,6 +204,12 @@ int validation(char *requestdir, char *rootdir){
  	* server root, cgi root and personal folder root
 	*/
 	else if(i < strlen(path)){ 
+
+		for(;i >= 0; i--){
+			if(path[i] == '/' && rootdir[i] == '/')
+				break;
+		}
+
 		int len = strlen(path) - i + 1;
 		char temp[len];
 		int j;
@@ -194,8 +219,8 @@ int validation(char *requestdir, char *rootdir){
 			temp[j]	= path[i];
 
 		//concatenate it to the root
-		strcat(rootdir,"/");
 		strcat(rootdir,temp);	
+		printf("trace the rootdir after validation: %s\n",rootdir);		
 
 		//then return NOT_VALID
 		return NOT_VALID;
@@ -205,8 +230,26 @@ int validation(char *requestdir, char *rootdir){
 }
 
 void cgi_response(int client_fd, char *method, char *path, char *protocol, char *cgi_root){
-
+	int templen = strlen(path) - CGI_LEN, i;
+	char tempdir[templen + 1];
+	for(i = 0; i < templen + 1; i++)
+		tempdir[i] = path[CGI_LEN + i];
+	char requestdir[MAX_LEN];
+	strcpy(requestdir,cgi_root);
+	strcat(requestdir,"/");
+	printf("tempdir, %s \n %d \n", tempdir, templen);
+	strcat(requestdir,tempdir);
+	printf("in cgi response, requestdir: %s \n           cgiroot: %s\n", requestdir, cgi_root);
+	int validresult = validation(requestdir,cgi_root);
 	
+	if(validresult == VALID){
+		printf("VALID request dir: %s \n", requestdir);
+		cgi_process(requestdir,client_fd,method,protocol);
+	}
+	if(validresult == NOT_VALID){
+		printf("NOT VALID cgi_root: %s \n", cgi_root);
+		cgi_process(cgi_root,client_fd,method,protocol);	
+	}	
 }
 
 void responsetime(int client_fd){
@@ -283,93 +326,69 @@ void do_process(char *path, char *method, int client_fd, char *protocol){
 				senddata(fd,client_fd);
 			exit(0);
 		}
-		
 	}
 
 	/*
 	* If the request is a directory
 	*/
-	if(S_ISDIR(stat_buf.st_mode)){ 
-		char temp_dir[MAX_LEN];
-		strcpy(temp_dir,path);
-		strcat(temp_dir,"/");
-		strcat(temp_dir,"index.html");
+	if(S_ISDIR(stat_buf.st_mode)) 
+		dir_process(client_fd,stat_buf,method,path);	
+}
 		
-		//There is a index.html in the directory, process the index.html
-		if(access(temp_dir,R_OK) == 0){ 
-			
-			struct stat temp_stat;
+void cgi_process(char *path, int client_fd, char *method, char *protocol){
+	
+	int status;
+	struct stat stat_buf;
+	
+	if(access(path, F_OK) != 0){
+		status = NOT_FOUND;
+		header(client_fd,status,stat_buf,0);
+		exit(0);
+	}
 
-			//stat the index.html error, 500 server error back
-			if(stat(temp_dir,&temp_stat) == -1){
-				status = SERVER_ERROR;
-				header(client_fd,status,temp_stat,0);
-				exit(0);
-			}
+	if(stat(path,&stat_buf) == -1){ 
+		status = SERVER_ERROR;
+		header(client_fd,status,stat_buf,0);
+		exit(0);
+	}
+
+	if(!S_ISDIR(stat_buf.st_mode)){ //if request a execution file, must have the execution permission
 		
-			//open index.html error, 500 server error back
-			if((fd = open(temp_dir,O_RDONLY)) < 0){
-				status = SERVER_ERROR;
-				header(client_fd,status,temp_stat,0);
-				exit(0);
-			}
-			
-			//open OK, 200 request ok back
-			else{
-				status = REQUEST_OK;
-				header(client_fd,status,temp_stat,0);
-				
-				//check the request type, if it is GET, we give data back
-				if(strcmp(method,"GET") == 0)
-					senddata(fd,client_fd);
-				exit(0);		
-			}
+		if(access(path,X_OK) != 0){
+			status = PERMISSION;
+			header(client_fd,status,stat_buf,0);
+			exit(0);
 		}
-		
-		//No index.html in the directory, give the file list back
-		else{ 
-			DIR *dp;
-			struct dirent *dir_buf;
-			
-			//open dir error, 500 server error back
-			if((dp = opendir(path)) == NULL){
+
+		else{ //do execution
+			int pid;
+			if((pid = fork()) < 0){
 				status = SERVER_ERROR;
 				header(client_fd,status,stat_buf,0);
 				exit(0);
-			}	
-
-			//open dir success, 200 request ok back
-			else{
-				status = REQUEST_OK;
-				int dirlen = 0;
-			
-				//calculate the total length of the file names under this directory
-				while((dir_buf = readdir(dp)) != NULL)
-					dirlen += strlen(dir_buf -> d_name);
-			
-				//reset the dp to the begining of this directory
-				rewinddir(dp);
-				header(client_fd,status,stat_buf,dirlen);
-				
-				//if the method is get, send the file list back
-				if(strcmp(method,"GET") == 0){
-					while((dir_buf = readdir(dp)) != NULL){
-						write(client_fd,dir_buf -> d_name, strlen(dir_buf -> d_name));
-						write(client_fd,"\n",1);
-					}
-				}
-				exit(0);
 			}
-		}
+			
+			if(pid == 0){ //fork a child to do execution
+
+				char *env_init[] = {"PATH=/tmp,NULL"};				
+				dup2(client_fd,1);	
+				if(execle(path,"",(char *)0,env_init) < 0){
+					status = SERVER_ERROR;
+					header(client_fd,status,stat_buf,0);
+					exit(0);	
+				}
+			}
+		}	
 	}
+	else //if request a dir cgi_bin or under it, the same as normal request
+		dir_process(client_fd,stat_buf,method,path);	
 }
-		
 
 void header(int client_fd,int status, struct stat stat_buf, int dirlen){
 	
 	//if the status code is request ok, send the header based on the stat_buf parameter.
 	if(status == REQUEST_OK){
-		write(client_fd, "http 200 request OK\n", 15);
+		write(client_fd, "http 200 request OK\n", 20);
 		responsetime(client_fd);
 		serverinfo(client_fd);
 		char buf[300];
@@ -388,11 +407,11 @@ void header(int client_fd,int status, struct stat stat_buf, int dirlen){
 	//if other status code, we don't need stat_buf info, because the last three information will be N/A
 	else{
 		if(status == SERVER_ERROR)
-			write(client_fd,"http 500 server inner error\n",23);
+			write(client_fd,"http 500 server inner error\n",28);
 		if(status == NOT_FOUND)
 			write(client_fd, "http 404 not found\n",19);
 		if(status == BAD_REQUEST)
-			write(client_fd,"http 400 bad request\n",16);
+			write(client_fd,"http 400 bad request\n",21);
 		if(status == PERMISSION) 
 			write(client_fd, "http 403 permission denied\n", 27);
 		responsetime(client_fd);
@@ -401,5 +420,140 @@ void header(int client_fd,int status, struct stat stat_buf, int dirlen){
 		write(client_fd,"content type: N/A\n",18);	
 		write(client_fd,"content length: N/A\n",20);
 		write(client_fd,"\n",1);
+	}
+}
+
+void cc_realpath(char *path, char *resolvedpath){
+	
+	Top c_stack;
+	c_stack = (Top)malloc(sizeof(struct s_node));	
+	c_stack -> next = NULL;
+	
+	char remaining[MAX_LEN];	
+	strcpy(remaining,path);
+	int templen = strlen(remaining);
+	int count = 0, j = 1, i;
+	for(i = templen - 1; i >= 0; i --){
+		if(remaining[i] != '/')
+			j++;
+		else{
+			int m = 0;
+			Stack node;
+			node = (Stack)malloc(sizeof(struct s_node));
+			for(m = 0; m < j; m++)
+				node -> component[m] = remaining[i+m];
+			printf("each component %s \n", node -> component);
+
+			if(strcmp(node -> component, "/..") != 0){
+				if(count == 0)	
+					push(node,c_stack);
+				if(count > 0)
+					count --;
+			}
+			else
+				count ++;
+			if(strcmp(node -> component, "/.") == 0)
+				free(pop(c_stack));
+			j = 1;
+		}
+	}
+	while(c_stack -> next != NULL){
+		Stack tempstack = pop(c_stack);
+		strcat(resolvedpath,tempstack -> component);
+		printf("trace the result path %s\n",resolvedpath);
+		free(tempstack);
+	}
+}
+
+//push into stack
+void push(Stack node, Top top){
+	
+	node -> next = top -> next;
+	top -> next = node;
+
+}
+
+//pop out stack
+Stack pop(Top top){
+
+	Stack temp;
+	temp = top -> next;
+	top -> next = top -> next -> next;
+	return temp;
+	
+}
+
+void dir_process(int client_fd, struct stat stat_buf,char *method, char *path){
+	int status;
+	char temp_dir[MAX_LEN];
+	strcpy(temp_dir,path);
+	strcat(temp_dir,"/");
+	strcat(temp_dir,"index.html");
+		
+	//There is a index.html in the directory, process the index.html
+	if(access(temp_dir,R_OK) == 0){ 
+		int fd;	
+		struct stat temp_stat;
+
+		//stat the index.html error, 500 server error back
+		if(stat(temp_dir,&temp_stat) == -1){
+			status = SERVER_ERROR;
+			header(client_fd,status,temp_stat,0);
+			exit(0);
+		}
+	
+		//open index.html error, 500 server error back
+		if((fd = open(temp_dir,O_RDONLY)) < 0){
+			status = SERVER_ERROR;
+			header(client_fd,status,temp_stat,0);
+			exit(0);
+		}
+			
+		//open OK, 200 request ok back
+		else{
+			status = REQUEST_OK;
+			header(client_fd,status,temp_stat,0);
+			
+			//check the request type, if it is GET, we give data back
+			if(strcmp(method,"GET") == 0)
+				senddata(fd,client_fd);
+			exit(0);		
+		}
+	}
+		
+	//No index.html in the directory, give the file list back
+	else{ 
+		DIR *dp;
+		struct dirent *dir_buf;
+		
+		//open dir error, 500 server error back
+		if((dp = opendir(path)) == NULL){
+			status = SERVER_ERROR;
+			header(client_fd,status,stat_buf,0);
+			exit(0);
+		}	
+
+		//open dir success, 200 request ok back
+		else{
+			status = REQUEST_OK;
+			int dirlen = 0;
+		
+			//calculate the total length of the file names under this directory
+			while((dir_buf = readdir(dp)) != NULL)
+				dirlen += strlen(dir_buf -> d_name);
+		
+			//reset the dp to the begining of this directory
+			rewinddir(dp);
+			header(client_fd,status,stat_buf,dirlen);
+			
+			//if the method is get, send the file list back
+			if(strcmp(method,"GET") == 0){
+				while((dir_buf = readdir(dp)) != NULL){
+					write(client_fd,dir_buf -> d_name, strlen(dir_buf -> d_name));
+					write(client_fd,"\n",1);
+				}
+			}
+			exit(0);
+		}
 	}
 }

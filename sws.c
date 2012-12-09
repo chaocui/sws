@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include <sys/types.h>
 #include <unistd.h>
+#include <errno.h>
 
 #include "ccsignal.h"
 #include "ccsocket.h"
@@ -64,21 +65,28 @@ int main(int argc, char **argv){
 		exit(1);
 	}
 
-	if(chdir(dir) == -1){
+	char server_root[MAX_LEN];
+	if(realpath(dir,server_root) == NULL){
 		fprintf(stderr,"Server root directory error\nCheck the validation of the root directory\n");
+		perror(strerror(errno));
 		exit(1);	
 	}
-	
-	char server_root[MAX_LEN];
+
 	char cgi_root[MAX_LEN];
-	getcwd(server_root,sizeof(server_root));
-	
 	if(c_flag == 1){
-		if(chdir(CGI_dir) == -1){
-			fprintf(stderr,"CGI root error\nCheck the validation of the cgi root");
+
+		if(CGI_dir == NULL){
+			fprintf(stderr,"Missing cgi root directory\n");
+			usage();
 			exit(1);
 		}
-		getcwd(cgi_root,sizeof(cgi_root));
+
+		if(realpath(CGI_dir,cgi_root) == NULL){
+			fprintf(stderr,"cgi root directory error\nCheck the validation of the directory\n");
+			perror(strerror(errno));
+			exit(1);	
+		}
+		printf("cgi_root, %s \n", cgi_root);
 	}
 
 	int sockfd;
