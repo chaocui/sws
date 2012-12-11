@@ -3,6 +3,7 @@
 #include <sys/types.h>
 #include <fcntl.h>
 #include <dirent.h>
+#include <syslog.h>
 
 #ifndef MAX_LEN
 #define MAX_LEN 128
@@ -41,6 +42,7 @@ void responsetime(int client_fd){
 	buf = ctime(&t);
 	write(client_fd,"Date: ",6);
 	write(client_fd,buf,30);
+	syslog(LOG_CRIT,"jahahahahahha");	
 }
 
 void serverinfo(int client_fd){

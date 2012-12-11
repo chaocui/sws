@@ -1,6 +1,7 @@
 #include <sys/socket.h>
 #include <netinet/in.h>
 #include <arpa/inet.h>
+#include <errno.h>
 
 #define MAX_CONNECTION 10
 
@@ -23,6 +24,7 @@ int init_listen(int i_flag, char *addr, int port){
 	
 	if(bind(sockfd,(struct sockaddr *)&name, sizeof(name))){
 		fprintf(stderr,"bind error,cannot bind socket to the given IP ADDRESS\nUse a valid IP within this machine\n");
+		perror(strerror(errno));
 		exit(1);
 	}
 
