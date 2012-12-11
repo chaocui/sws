@@ -4,6 +4,7 @@
 #include <sys/types.h>
 #include <unistd.h>
 #include <errno.h>
+#include <syslog.h>
 
 #include "ccsignal.h"
 #include "ccsocket.h"
@@ -95,7 +96,7 @@ int main(int argc, char **argv){
 		exit(1);
 	}
 
-	struct sockaddr remote;
+	struct sockaddr_in remote;
 	int client_fd;
 	socklen_t receive;
 	while(1){	
@@ -103,6 +104,9 @@ int main(int argc, char **argv){
 			fprintf(stderr,"accept error");
 			exit(1);
 		}	
+		char incomming[20];
+		inet_ntop(AF_INET,&remote.sin_addr.s_addr,incomming,receive);
+		printf("incomming request from %s\n",incomming);
 		int cid;
 		char buf[1024];
 		if((cid = fork()) == 0){	/*child process, handle the coming request*/

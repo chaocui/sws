@@ -117,7 +117,7 @@ void response(int client_fd, char *method, char *path, char *protocol, char *ser
 	* Normal case, handling reques like:
 	* /dir/subdir/file
 	*/
-	if(path[2] != '~'){
+	if(path[1] != '~'){
 		char requestdir[MAX_LEN] = "";
 		strcat(requestdir,server_root);
 		strcat(requestdir,path);
@@ -144,8 +144,37 @@ void response(int client_fd, char *method, char *path, char *protocol, char *ser
 	* Personal folder request like:
 	* /~ccui1/subdir/file
 	*/
-	else if(path[2] == '~'){
+	else if(path[1] == '~'){
+		char personname[MAX_LEN] = "";
+		int i = 2;
+		for(i = 2; i < strlen(path); i++){
+			if(path[i] != '/')
+				personname[i - 2] = path[i];
+			else
+				break;		
+		}	
+		printf("pull the personname : %s out \n",personname);		
+		char personroot[MAX_LEN] = "";
+		strcpy(personroot,"/home/");
+		strcat(personroot,personname);
+		strcat(personroot,"/");
+		strcat(personroot,"sws/");	
+		printf("personroot: %s \n",personroot);
+		
+		char requestdir[MAX_LEN] = "";		
+		strcpy(requestdir,personroot);
+		char temp[MAX_LEN] = "";
+		int j;
+		for(j = 0; i < strlen(path); i++,j++)
+			temp[j] = path[i]; 	
+		strcat(requestdir,temp);		
+		printf("requestdir is %s \n",requestdir);
 
+		int validresult = validation(requestdir,personroot);
+		if(validresult == VALID)
+			do_process(requestdir,method,client_fd,protocol);
+		if(validresult == NOT_VALID)
+			do_process(personroot,method,client_fd,protocol);
 	}
 }
 
@@ -204,7 +233,20 @@ int validation(char *requestdir, char *rootdir){
  	* server root, cgi root and personal folder root
 	*/
 	else if(i < strlen(path)){ 
-
+			
+		/*
+		* At position i, path and rootdir won't have the same charactor
+		* So, if path[i] is /, then rootdir is not /
+		* And if path [i] is /, it means such condition happened:
+		* the root dir is /home/cc/homework631/....
+		* the path dir is /home/cc/ho/....
+		* We cannot take the last / as the seperation.
+		* We need to find the previous / as the seperation. 
+		* From there to the end of the path, are the remaining path we need.
+		* So only path[i] and rootdir[i] are both /, we take that i position as the starting point.
+		* We need to fine the first / from there, take all the rest path.
+		* Concatenate the rest path to the root dir.
+		*/
 		for(;i >= 0; i--){
 			if(path[i] == '/' && rootdir[i] == '/')
 				break;
@@ -230,6 +272,13 @@ int validation(char *requestdir, char *rootdir){
 }
 
 void cgi_response(int client_fd, char *method, char *path, char *protocol, char *cgi_root){
+	
+	/*
+	* Get the path after the /cgi_bin/
+	* For example:
+	* the request is /cgi_bin/subdir/hello
+	* We get the /subdir/hello part
+	*/
 	int templen = strlen(path) - CGI_LEN, i;
 	char tempdir[templen + 1];
 	for(i = 0; i < templen + 1; i++)
@@ -240,12 +289,15 @@ void cgi_response(int client_fd, char *method, char *path, char *protocol, char 
 	printf("tempdir, %s \n %d \n", tempdir, templen);
 	strcat(requestdir,tempdir);
 	printf("in cgi response, requestdir: %s \n           cgiroot: %s\n", requestdir, cgi_root);
+	
 	int validresult = validation(requestdir,cgi_root);
 	
+	//If the request URL is valid, use the reques dir directly
 	if(validresult == VALID){
 		printf("VALID request dir: %s \n", requestdir);
 		cgi_process(requestdir,client_fd,method,protocol);
 	}
+	//If the request URL is not valid, use the cgi_root which has been modified in the validation function
 	if(validresult == NOT_VALID){
 		printf("NOT VALID cgi_root: %s \n", cgi_root);
 		cgi_process(cgi_root,client_fd,method,protocol);	
@@ -340,20 +392,24 @@ void cgi_process(char *path, int client_fd, char *method, char *protocol){
 	int status;
 	struct stat stat_buf;
 	
+	//Check the existance of the request file
 	if(access(path, F_OK) != 0){
 		status = NOT_FOUND;
 		header(client_fd,status,stat_buf,0);
 		exit(0);
 	}
 
+	//Stat to get the file info
 	if(stat(path,&stat_buf) == -1){ 
 		status = SERVER_ERROR;
 		header(client_fd,status,stat_buf,0);
 		exit(0);
 	}
 
-	if(!S_ISDIR(stat_buf.st_mode)){ //if request a execution file, must have the execution permission
+	//If request a execution file, we call the execle to execute the file,	
+	if(!S_ISDIR(stat_buf.st_mode)){
 		
+		//check the execution permission
 		if(access(path,X_OK) != 0){
 			status = PERMISSION;
 			header(client_fd,status,stat_buf,0);
@@ -362,6 +418,7 @@ void cgi_process(char *path, int client_fd, char *method, char *protocol){
 
 		else{ //do execution
 			int pid;
+			
 			if((pid = fork()) < 0){
 				status = SERVER_ERROR;
 				header(client_fd,status,stat_buf,0);
@@ -369,8 +426,8 @@ void cgi_process(char *path, int client_fd, char *method, char *protocol){
 			}
 			
 			if(pid == 0){ //fork a child to do execution
-
 				char *env_init[] = {"PATH=/tmp,NULL"};				
+				//redirect the output of the execution result to the socket descriptor
 				dup2(client_fd,1);	
 				if(execle(path,"",(char *)0,env_init) < 0){
 					status = SERVER_ERROR;
@@ -425,6 +482,7 @@ void header(int client_fd,int status, struct stat stat_buf, int dirlen){
 
 void cc_realpath(char *path, char *resolvedpath){
 	
+	//generate a stack to store each component of the path.	
 	Top c_stack;
 	c_stack = (Top)malloc(sizeof(struct s_node));	
 	c_stack -> next = NULL;
@@ -432,31 +490,71 @@ void cc_realpath(char *path, char *resolvedpath){
 	char remaining[MAX_LEN];	
 	strcpy(remaining,path);
 	int templen = strlen(remaining);
+	
+	/*
+	* count is used to count the number of .. in the path
+	* j is used to count the length of each component
+	*/
 	int count = 0, j = 1, i;
+
+	/*
+	* We traverse the path from end to beginning
+	* Each time we met a /, we know that from that position, 
+	* in j length, they all belong to a component.
+	* Then, we check this component,
+	* If it is a .., we increase the count number,
+	* If it is not a .., we check the count number,
+	* 	If the count is 0, that means we can push this component to the stack
+	* 	If the count is greater than 0, that means this component will be remove by a .. operation. So do nothing, just minuse 1 from count.
+	* If it is a ., because we have pushed it on to the stack at previous operation, we need to pop it out.
+	* After this component is done, we reset j to 1.(j is 1 initially because each component at least has one character that is /) 
+	*/
 	for(i = templen - 1; i >= 0; i --){
+		
+		//Get the length of each component
 		if(remaining[i] != '/')
 			j++;
+		
+		//We found the seperation of this component, process this component
 		else{
 			int m = 0;
 			Stack node;
 			node = (Stack)malloc(sizeof(struct s_node));
+
+			//store the string in the stack node.
 			for(m = 0; m < j; m++)
 				node -> component[m] = remaining[i+m];
+				
 			printf("each component %s \n", node -> component);
 
+			//If it is not a ..
 			if(strcmp(node -> component, "/..") != 0){
+				
+				//if count is 0, push onto stack
 				if(count == 0)	
 					push(node,c_stack);
+				//if count is greater than 0, minuse 1.
 				if(count > 0)
 					count --;
 			}
+			//If it is a .., increase count.
 			else
 				count ++;
+		
+			//if it is a ., remove it from the stack, because . has no effection in a path.
 			if(strcmp(node -> component, "/.") == 0)
 				free(pop(c_stack));
+
+			//reset j to 1
 			j = 1;
 		}
 	}
+
+	/*
+	* After processing all the components
+	* The remaining components in the stack will make the real path of the given path.
+	* Traverse the stack and concatenate them together.
+	*/
 	while(c_stack -> next != NULL){
 		Stack tempstack = pop(c_stack);
 		strcat(resolvedpath,tempstack -> component);
