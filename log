@@ -1,0 +1,3678 @@
+[INFO]One request comes from IP address:0.128.0.0
+[INFO]Request time: Thu Dec 13 17:30:37 2012
+[INFO]Request line: GET
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address:127.0.0.1
+[INFO]Request time: Thu Dec 13 17:30:56 2012
+[INFO]Request line: GET
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address:0.128.0.0
+[INFO]Request time: Thu Dec 13 17:35:45 2012
+[INFO]Request line: GET
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address:127.0.0.1
+[INFO]Request time: Thu Dec 13 17:35:49 2012
+[INFO]Request line: GET
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address:0.128.0.0
+[INFO]Request time: Thu Dec 13 17:38:49 2012
+[INFO]Request line: GET
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address:0.128.0.0
+[INFO]Request time: Thu Dec 13 17:50:38 2012
+[INFO]Request line: GET / HTTP/1.1
+Host: localhost:10001
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (X11; Linux i686) AppleWebKit/536.11 (KHTML, like Gecko) Ubuntu/12.04 Chromium/20.0.1132.47 Chrome/20.0.1132.47 Safari/536.11
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+Accept-Charset: GBK,utf-8;q=0.7,*;q=0.3
+
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address:127.0.0.1
+[INFO]Request time: Thu Dec 13 17:50:38 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+Host: localhost:10001
+Connection: keep-alive
+Accept: */*
+User-Agent: Mozilla/5.0 (X11; Linux i686) AppleWebKit/536.11 (KHTML, like Gecko) Ubuntu/12.04 Chromium/20.0.1132.47 Chrome/20.0.1132.47 Safari/536.11
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+Accept-Charset: GBK,utf-8;q=0.7,*;q=0.3
+
+[INFO]HTTP status code: 404
+[INFO]Content-Length: N/A
+
+[INFO]One request comes from IP address:127.0.0.1
+[INFO]Request time: Thu Dec 13 17:52:29 2012
+[INFO]Request line: GET / HTTP/1.1
+Host: localhost:10001
+Connection: keep-alive
+Cache-Control: max-age=0
+User-Agent: Mozilla/5.0 (X11; Linux i686) AppleWebKit/536.11 (KHTML, like Gecko) Ubuntu/12.04 Chromium/20.0.1132.47 Chrome/20.0.1132.47 Safari/536.11
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+Accept-Charset: GBK,utf-8;q=0.7,*;q=0.3
+
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address:127.0.0.1
+[INFO]Request time: Thu Dec 13 17:52:29 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+Host: localhost:10001
+Connection: keep-alive
+Accept: */*
+User-Agent: Mozilla/5.0 (X11; Linux i686) AppleWebKit/536.11 (KHTML, like Gecko) Ubuntu/12.04 Chromium/20.0.1132.47 Chrome/20.0.1132.47 Safari/536.11
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+Accept-Charset: GBK,utf-8;q=0.7,*;q=0.3
+
+[INFO]HTTP status code: 404
+[INFO]Content-Length: N/A
+
+[INFO]One request comes from IP address:127.0.0.1
+[INFO]Request time: Thu Dec 13 17:56:18 2012
+[INFO]Request line: GET / HTTP/1.1
+Host: localhost:10001
+Connection: keep-alive
+Cache-Control: max-age=0
+User-Agent: Mozilla/5.0 (X11; Linux i686) AppleWebKit/536.11 (KHTML, like Gecko) Ubuntu/12.04 Chromium/20.0.1132.47 Chrome/20.0.1132.47 Safari/536.11
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+Accept-Charset: GBK,utf-8;q=0.7,*;q=0.3
+
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address:127.0.0.1
+[INFO]Request time: Thu Dec 13 17:56:18 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+Host: localhost:10001
+Connection: keep-alive
+Accept: */*
+User-Agent: Mozilla/5.0 (X11; Linux i686) AppleWebKit/536.11 (KHTML, like Gecko) Ubuntu/12.04 Chromium/20.0.1132.47 Chrome/20.0.1132.47 Safari/536.11
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+Accept-Charset: GBK,utf-8;q=0.7,*;q=0.3
+
+[INFO]HTTP status code: 404
+[INFO]Content-Length: N/A
+
+[INFO]One request comes from IP address:127.0.0.1
+[INFO]Request time: Thu Dec 13 17:56:27 2012
+[INFO]Request line: GET /testdir HTTP/1.1
+Host: localhost:10001
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (X11; Linux i686) AppleWebKit/536.11 (KHTML, like Gecko) Ubuntu/12.04 Chromium/20.0.1132.47 Chrome/20.0.1132.47 Safari/536.11
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+Accept-Charset: GBK,utf-8;q=0.7,*;q=0.3
+
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 32
+
+[INFO]One request comes from IP address:127.0.0.1
+[INFO]Request time: Thu Dec 13 17:56:27 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+Host: localhost:10001
+Connection: keep-alive
+Accept: */*
+User-Agent: Mozilla/5.0 (X11; Linux i686) AppleWebKit/536.11 (KHTML, like Gecko) Ubuntu/12.04 Chromium/20.0.1132.47 Chrome/20.0.1132.47 Safari/536.11
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+Accept-Charset: GBK,utf-8;q=0.7,*;q=0.3
+
+[INFO]HTTP status code: 404
+[INFO]Content-Length: N/A
+
+[INFO]One request comes from IP address:0.128.0.0
+[INFO]The request conclusion:
+[INFO]Request time: Thu Dec 13 18:09:41 2012
+[INFO]Request line: GET / HTTP/1.0
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Thu Dec 13 18:10:19 2012
+[INFO]Request line: GET /cig_bin/hello HTTP/1.0
+[INFO]HTTP status code: 404
+[INFO]Content-Length: N/A
+
+[INFO]One request comes from IP address:0.128.0.0
+[INFO]The request conclusion:
+[INFO]Request time: Fri Dec 14 17:15:44 2012
+[INFO]Request line: GET /../../testdir/foo/bar HTTP/1.0
+[INFO]HTTP status code: 404
+[INFO]Content-Length: N/A
+
+[INFO]One request comes from IP address:0.128.0.0
+[INFO]The request conclusion:
+[INFO]Request time: Fri Dec 14 17:50:39 2012
+[INFO]Request line: ÿôÿý[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address:0.128.0.0
+[INFO]The request conclusion:
+[INFO]Request time: Fri Dec 14 17:51:48 2012
+[INFO]Request line: ÿôÿý[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address:0.0.0.0
+[INFO]The request conclusion:
+[INFO]Request time: Fri Dec 14 17:52:05 2012
+[INFO]Request line: 
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address:0.0.0.0
+[INFO]The request conclusion:
+[INFO]Request time: Fri Dec 14 17:52:20 2012
+[INFO]Request line: 
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address:140.202.130.191
+[INFO]The request conclusion:
+[INFO]Request time: Fri Dec 14 17:54:16 2012
+[INFO]Request line: ÿôÿý[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address:0.0.0.0
+[INFO]The request conclusion:
+[INFO]Request time: Fri Dec 14 17:54:28 2012
+[INFO]Request line: 
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address:0.0.0.0
+[INFO]The request conclusion:
+[INFO]Request time: Fri Dec 14 17:54:41 2012
+[INFO]Request line: 
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address:äãs·
+[INFO]The request conclusion:
+[INFO]Request time: Fri Dec 14 17:57:12 2012
+[INFO]Request line: 
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address:::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Fri Dec 14 17:57:44 2012
+[INFO]Request line: ÿôÿý[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address:::1
+[INFO]The request conclusion:
+[INFO]Request time: Fri Dec 14 17:57:57 2012
+[INFO]Request line: 
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address:::1
+[INFO]The request conclusion:
+[INFO]Request time: Fri Dec 14 17:57:59 2012
+[INFO]Request line: 
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address:::1
+[INFO]The request conclusion:
+[INFO]Request time: Fri Dec 14 17:58:00 2012
+[INFO]Request line: 
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address:ä³z·
+[INFO]The request conclusion:
+[INFO]Request time: Fri Dec 14 17:59:03 2012
+[INFO]Request line: ÿôÿý[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address:::1
+[INFO]The request conclusion:
+[INFO]Request time: Fri Dec 14 17:59:07 2012
+[INFO]Request line: ÿôÿý[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address:äÓn·
+[INFO]The request conclusion:
+[INFO]Request time: Fri Dec 14 17:59:26 2012
+[INFO]Request line: ÿôÿý[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address:
+[INFO]The request conclusion:
+[INFO]Request time: Fri Dec 14 18:00:29 2012
+[INFO]Request line: ÿôÿý[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address:::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Fri Dec 14 18:00:34 2012
+[INFO]Request line: ÿôÿý[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address:::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Fri Dec 14 18:00:37 2012
+[INFO]Request line: ÿôÿý[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address:::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Fri Dec 14 18:00:39 2012
+[INFO]Request line: ÿôÿý[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address:::1
+[INFO]The request conclusion:
+[INFO]Request time: Fri Dec 14 18:00:48 2012
+[INFO]Request line: ÿôÿý[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address:
+[INFO]The request conclusion:
+[INFO]Request time: Fri Dec 14 18:02:47 2012
+[INFO]Request line: ÿôÿý[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address:::1
+[INFO]The request conclusion:
+[INFO]Request time: Fri Dec 14 18:02:49 2012
+[INFO]Request line: ÿôÿý[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address:
+[INFO]The request conclusion:
+[INFO]Request time: Fri Dec 14 18:06:57 2012
+[INFO]Request line: ÿôÿý[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address:::
+[INFO]The request conclusion:
+[INFO]Request time: Fri Dec 14 18:20:57 2012
+[INFO]Request line: ÿôÿý[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address:::1
+[INFO]The request conclusion:
+[INFO]Request time: Fri Dec 14 18:20:59 2012
+[INFO]Request line: ÿôÿý[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address:::1
+[INFO]The request conclusion:
+[INFO]Request time: Fri Dec 14 18:21:01 2012
+[INFO]Request line: ÿôÿý[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address:::1
+[INFO]The request conclusion:
+[INFO]Request time: Fri Dec 14 18:21:03 2012
+[INFO]Request line: ÿôÿý[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address:::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Fri Dec 14 18:21:12 2012
+[INFO]Request line: ÿôÿý[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address:::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Fri Dec 14 18:21:41 2012
+[INFO]Request line: ÿôÿý[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address:::1
+[INFO]The request conclusion:
+[INFO]Request time: Fri Dec 14 18:22:12 2012
+[INFO]Request line: ÿôÿý[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address:::
+[INFO]The request conclusion:
+[INFO]Request time: Fri Dec 14 19:55:05 2012
+[INFO]Request line: ÿôÿý[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Fri Dec 14 20:27:31 2012
+[INFO]Request line: ÿôÿý[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address:::1
+[INFO]The request conclusion:
+[INFO]Request time: Fri Dec 14 20:28:02 2012
+[INFO]Request line: ÿôÿý[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Fri Dec 14 20:39:04 2012
+[INFO]Request line: ÿôÿý[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address: ::1
+[INFO]The request conclusion:
+[INFO]Request time: Fri Dec 14 20:39:12 2012
+[INFO]Request line: ÿôÿý[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address: ::1
+[INFO]The request conclusion:
+[INFO]Request time: Fri Dec 14 20:40:14 2012
+[INFO]Request line: ÿôÿý[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Fri Dec 14 20:40:22 2012
+[INFO]Request line: ÿôÿý[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Fri Dec 14 21:34:13 2012
+[INFO]Request line: GET
+
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Fri Dec 14 21:39:52 2012
+[INFO]Request line: 
+
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Fri Dec 14 21:41:57 2012
+[INFO]Request line: GET
+GET
+GET
+
+[INFO]HTTP status code: 404
+[INFO]Content-Length: N/A
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Fri Dec 14 21:46:52 2012
+[INFO]Request line: 
+[INFO]HTTP status code: 404
+[INFO]Content-Length: N/A
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Fri Dec 14 21:49:11 2012
+[INFO]Request line: GET
+[INFO]HTTP status code: 404
+[INFO]Content-Length: N/A
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Fri Dec 14 21:50:08 2012
+[INFO]Request line: GET
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Fri Dec 14 21:51:12 2012
+[INFO]Request line: GET / HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Fri Dec 14 21:51:12 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length: N/A
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Fri Dec 14 21:51:19 2012
+[INFO]Request line: GET / HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Fri Dec 14 21:51:19 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length: N/A
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Fri Dec 14 21:54:20 2012
+[INFO]Request line: GET
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Fri Dec 14 21:54:55 2012
+[INFO]Request line: GET
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Fri Dec 14 23:05:09 2012
+[INFO]Request line: GET
+
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Fri Dec 14 23:32:15 2012
+[INFO]Request line: a
+
+[INFO]HTTP status code: 501
+[INFO]Content-Length: N/A
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Fri Dec 14 23:32:29 2012
+[INFO]Request line: asdfg
+
+[INFO]HTTP status code: 501
+[INFO]Content-Length: N/A
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Fri Dec 14 23:32:35 2012
+[INFO]Request line: get
+
+[INFO]HTTP status code: 501
+[INFO]Content-Length: N/A
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Fri Dec 14 23:32:39 2012
+[INFO]Request line: asdfsag
+
+[INFO]HTTP status code: 501
+[INFO]Content-Length: N/A
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Fri Dec 14 23:32:43 2012
+[INFO]Request line: sfdsfsafsa gfdsagsa
+
+[INFO]HTTP status code: 501
+[INFO]Content-Length: N/A
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Fri Dec 14 23:37:59 2012
+[INFO]Request line: a
+
+[INFO]HTTP status code: 501
+[INFO]Content-Length: N/A
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Fri Dec 14 23:38:23 2012
+[INFO]Request line: a
+
+[INFO]HTTP status code: 501
+[INFO]Content-Length: N/A
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Fri Dec 14 23:40:20 2012
+[INFO]Request line: a
+[INFO]HTTP status code: 501
+[INFO]Content-Length: N/A
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Fri Dec 14 23:41:54 2012
+[INFO]Request line: a
+[INFO]HTTP status code: 501
+[INFO]Content-Length: N/A
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Fri Dec 14 23:42:37 2012
+[INFO]Request line: a
+[INFO]HTTP status code: 501
+[INFO]Content-Length: N/A
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Fri Dec 14 23:42:44 2012
+[INFO]Request line: GET
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Fri Dec 14 23:46:14 2012
+[INFO]Request line: a
+[INFO]HTTP status code: 501
+[INFO]Content-Length: N/A
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Fri Dec 14 23:47:09 2012
+[INFO]Request line: GET
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 00:06:17 2012
+[INFO]Request line: a
+[INFO]HTTP status code: 501
+[INFO]Content-Length: N/A
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 00:06:25 2012
+[INFO]Request line: GET
+[INFO]HTTP status code: 400
+[INFO]Content-Length: N/A
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 00:07:46 2012
+[INFO]Request line: a
+[INFO]HTTP status code: 501
+[INFO]Content-Length: N/A
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 00:08:04 2012
+[INFO]Request line: GET
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 00:08:19 2012
+[INFO]Request line: GET
+[INFO]HTTP status code: 400
+[INFO]Content-Length: N/A
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 00:19:28 2012
+[INFO]Request line: a
+[INFO]HTTP status code: 501
+[INFO]Content-Length: N/A
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 00:19:35 2012
+[INFO]Request line: GET
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 00:20:20 2012
+[INFO]Request line: GET HTTP/1.0
+[INFO]HTTP status code: 404
+[INFO]Content-Length: N/A
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 00:21:07 2012
+[INFO]Request line: GET . HTTP/1.0
+[INFO]HTTP status code: 404
+[INFO]Content-Length: N/A
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 00:22:20 2012
+[INFO]Request line: GET . HTTP/1.0
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 00:22:36 2012
+[INFO]Request line: GET / HTTP/1.0
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 00:23:00 2012
+[INFO]Request line: POST / HTTP/1.0
+[INFO]HTTP status code: 400
+[INFO]Content-Length: N/A
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 00:25:33 2012
+[INFO]Request line: GET
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 00:26:54 2012
+[INFO]Request line: GET
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 00:27:01 2012
+[INFO]Request line: GET 
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 00:27:11 2012
+[INFO]Request line: GET HTTP/1.0
+[INFO]HTTP status code: 404
+[INFO]Content-Length: N/A
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 00:28:20 2012
+[INFO]Request line: GET /
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 00:44:51 2012
+[INFO]Request line: POST /
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 00:47:07 2012
+[INFO]Request line: POST / HTTP/1.0
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 00:49:00 2012
+[INFO]Request line: POST / HTTP/1.0
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 00:49:19 2012
+[INFO]Request line: POST / HTTP/1.0
+[INFO]HTTP status code: 400
+[INFO]Content-Length: N/A
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 00:51:11 2012
+[INFO]Request line: POST / HTTP/1.0
+[INFO]HTTP status code: 400
+[INFO]Content-Length: N/A
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 00:51:55 2012
+[INFO]Request line: ÿôÿý[INFO]HTTP status code: 501
+[INFO]Content-Length: N/A
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 00:52:17 2012
+[INFO]Request line: POST / HTTP/1.0
+[INFO]HTTP status code: 400
+[INFO]Content-Length: N/A
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 00:56:30 2012
+[INFO]Request line: POST / HTTP/1.0
+[INFO]HTTP status code: 400
+[INFO]Content-Length: N/A
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 00:58:19 2012
+[INFO]Request line: POST / HTTP/1.0
+[INFO]HTTP status code: 400
+[INFO]Content-Length: N/A
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 00:58:42 2012
+[INFO]Request line: POST / HTTP/1.0
+[INFO]HTTP status code: 400
+[INFO]Content-Length: N/A
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 01:00:44 2012
+[INFO]Request line: POST / HTTP/1.0
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 01:01:00 2012
+[INFO]Request line: POST / HTTP/1.0
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 01:05:30 2012
+[INFO]Request line: POST / HTTP/1.0
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 01:08:04 2012
+[INFO]Request line: POST / HTTP/1.0
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 01:08:37 2012
+[INFO]Request line: POST
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 01:08:58 2012
+[INFO]Request line: POST / HTTP/1.0
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 01:11:06 2012
+[INFO]Request line: POST / HTTP/1.0
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 01:49:21 2012
+[INFO]Request line: POST / HTTP/1.0
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 01:50:33 2012
+[INFO]Request line: POST /cig_bin/post.cgi HTTP/1.0
+[INFO]HTTP status code: 404
+[INFO]Content-Length: N/A
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 02:02:02 2012
+[INFO]Request line: GET / HTTP/1.0
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 02:18:23 2012
+[INFO]Request line: GET
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 03:03:07 2012
+[INFO]Request line: GET[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 03:04:52 2012
+[INFO]Request line: GET[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 03:04:52 2012
+[INFO]Request line: GET[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 03:04:52 2012
+[INFO]Request line: GET[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 03:04:56 2012
+[INFO]Request line: GET[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 03:05:54 2012
+[INFO]Request line: GET[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 03:05:54 2012
+[INFO]Request line: GET[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 03:07:57 2012
+[INFO]Request line: GET[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 03:08:16 2012
+[INFO]Request line: POST[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 03:10:20 2012
+[INFO]Request line: GET[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 03:10:20 2012
+[INFO]Request line: GET[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 03:11:08 2012
+[INFO]Request line: GET[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 03:12:52 2012
+[INFO]Request line: GET[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 03:13:19 2012
+[INFO]Request line: GET[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 03:13:19 2012
+[INFO]Request line: GET[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 03:15:15 2012
+[INFO]Request line: GET[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 03:15:58 2012
+[INFO]Request line: GET[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 03:17:25 2012
+[INFO]Request line: GET[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 03:24:59 2012
+[INFO]Request line: GET[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 03:25:04 2012
+[INFO]Request line: GET[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 03:26:41 2012
+[INFO]Request line: [INFO]HTTP status code: 501
+[INFO]Content-Length: N/A
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 03:32:10 2012
+[INFO]Request line: [INFO]HTTP status code: 501
+[INFO]Content-Length: N/A
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 03:56:49 2012
+[INFO]Request line: GET / HTTP/1.0
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 03:57:05 2012
+[INFO]Request line: GET
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 03:57:27 2012
+[INFO]Request line: GET HTTP/1.0
+[INFO]HTTP status code: 404
+[INFO]Content-Length: N/A
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 03:57:36 2012
+[INFO]Request line: GET . 
+[INFO]HTTP status code: 404
+[INFO]Content-Length: N/A
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 04:00:07 2012
+[INFO]Request line: GET / HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 04:00:07 2012
+[INFO]Request line: GET / HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 04:02:06 2012
+[INFO]Request line: GET / HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 04:02:06 2012
+[INFO]Request line: GET / HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 04:03:03 2012
+[INFO]Request line: GET / HTTP/1.0
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 04:04:54 2012
+[INFO]Request line: GET / HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 04:04:54 2012
+[INFO]Request line: GET / HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 04:06:21 2012
+[INFO]Request line: GET
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 04:06:39 2012
+[INFO]Request line: GET / HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 04:13:13 2012
+[INFO]Request line: GET / HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 04:13:13 2012
+[INFO]Request line: GET / HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 04:14:07 2012
+[INFO]Request line: GET / HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 04:14:07 2012
+[INFO]Request line: GET / HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 04:20:10 2012
+[INFO]Request line: GET / HTTP/1.0
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 04:20:26 2012
+[INFO]Request line: GET / HTTP/1.0
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 04:22:20 2012
+[INFO]Request line: GET / HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 04:23:21 2012
+[INFO]Request line: GET / HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 04:23:21 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length: N/A
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 04:23:21 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length: N/A
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 04:23:32 2012
+[INFO]Request line: GET / HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 04:25:11 2012
+[INFO]Request line: GET / HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 04:26:07 2012
+[INFO]Request line: GET / HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 04:26:08 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length: N/A
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 04:26:08 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length: N/A
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 04:27:06 2012
+[INFO]Request line: GET / HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 04:27:11 2012
+[INFO]Request line: GET / HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 04:28:32 2012
+[INFO]Request line: GET / HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 04:28:34 2012
+[INFO]Request line: GET / HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 04:28:35 2012
+[INFO]Request line: GET / HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 04:28:35 2012
+[INFO]Request line: GET / HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 04:28:36 2012
+[INFO]Request line: GET / HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 04:29:25 2012
+[INFO]Request line: GET / HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 04:29:25 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length: N/A
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 04:29:25 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length: N/A
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 04:29:40 2012
+[INFO]Request line: GET / HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 04:31:06 2012
+[INFO]Request line: GET / HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 04:31:32 2012
+[INFO]Request line: GET / HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 04:34:42 2012
+[INFO]Request line: GET / HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 04:35:08 2012
+[INFO]Request line: GET / HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 04:36:57 2012
+[INFO]Request line: GET /cig_bin/test HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length: N/A
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 04:36:57 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 151
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 04:37:04 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 151
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 04:37:20 2012
+[INFO]Request line: GET /testdir HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 32
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 04:38:26 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 151
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 04:41:52 2012
+[INFO]Request line: GET / HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 04:41:58 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 151
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 04:42:35 2012
+[INFO]Request line: GET / HTTP/1.0
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 04:49:09 2012
+[INFO]Request line: GET / HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 04:49:09 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length: N/A
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 04:49:32 2012
+[INFO]Request line: GET / HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 04:49:32 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length: N/A
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 04:49:39 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 151
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 04:49:39 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length: N/A
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 04:50:01 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 151
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 04:50:01 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length: N/A
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 04:54:34 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 151
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 04:54:34 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length: N/A
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 04:57:28 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 148
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 04:57:28 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length: N/A
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 04:58:58 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 148
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 04:58:58 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length: N/A
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 05:07:45 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 148
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 05:07:45 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length: N/A
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 05:13:38 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 148
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 05:13:38 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 148
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 05:13:39 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length: N/A
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 05:20:32 2012
+[INFO]Request line: GET / HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 05:20:32 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 148
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 05:20:33 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length: N/A
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 05:33:30 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 148
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 05:33:30 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length: N/A
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 05:35:10 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 148
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 05:35:10 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 148
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 05:35:10 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length: N/A
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 05:35:15 2012
+[INFO]Request line: POST /cgi-bin/hello HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length: N/A
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 05:36:23 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 143
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 05:36:23 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 143
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 05:36:24 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length: N/A
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 05:36:27 2012
+[INFO]Request line: POST /cgi-bin/hello HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length: N/A
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 05:36:44 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length: N/A
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 05:37:41 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 143
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 05:37:41 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 143
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 05:37:41 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length: N/A
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 05:37:45 2012
+[INFO]Request line: POST /cgi-bin/hello HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length: N/A
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 05:41:34 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 143
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 05:41:34 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 143
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 05:41:34 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length: N/A
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 05:41:39 2012
+[INFO]Request line: POST /cgi-bin/hello HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length: N/A
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 05:42:33 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 143
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 05:42:33 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 143
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 05:42:33 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length: N/A
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 05:42:37 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length: N/A
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 05:45:37 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 146
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 05:45:37 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 146
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 05:45:38 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length: N/A
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 05:45:41 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length: N/A
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 16:28:29 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 146
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 16:28:29 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length: N/A
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 16:28:35 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length: N/A
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 16:29:20 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 143
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 16:29:20 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length: N/A
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 16:29:25 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length: N/A
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 17:03:08 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 143
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 17:03:08 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length: N/A
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 17:03:16 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length: N/A
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 17:10:29 2012
+[INFO]Content-Length: N/A
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 17:14:01 2012
+[INFO]Request line: POST / HTTP/1.0
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 17:49:18 2012
+[INFO]Request line: GET / HTTP/1.0
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 17:49:39 2012
+[INFO]Request line: GET / HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 17:49:39 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length: N/A
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 17:51:52 2012
+[INFO]Request line: GET /cgi-bin.hello HTTP/1.0
+[INFO]HTTP status code: 404
+[INFO]Content-Length: N/A
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 17:56:04 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 143
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 17:56:04 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length: N/A
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 17:56:09 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length: N/A
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 17:56:19 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 143
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 17:56:19 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 143
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 17:56:19 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length: N/A
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 17:56:23 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length: N/A
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 17:58:56 2012
+[INFO]Request line: GET /cgi-bin/test3 HTTP/1.1
+[INFO]HTTP status code: 403
+[INFO]Content-Length: N/A
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 18:14:55 2012
+[INFO]Request line: GET /cgi-bin/test3 HTTP/1.1
+[INFO]HTTP status code: 403
+[INFO]Content-Length: N/A
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 18:14:55 2012
+[INFO]Request line: GET /cgi-bin/test3 HTTP/1.1
+[INFO]HTTP status code: 403
+[INFO]Content-Length: N/A
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 18:16:23 2012
+[INFO]Request line: GET /cgi-bin/test3 HTTP/1.1
+[INFO]HTTP status code: 403
+[INFO]Content-Length: N/A
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 18:16:23 2012
+[INFO]Request line: GET / HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 18:16:28 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length: N/A
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 18:16:35 2012
+[INFO]Request line: GET /cgi-bin/test3 HTTP/1.1
+[INFO]HTTP status code: 403
+[INFO]Content-Length: N/A
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 18:17:14 2012
+[INFO]Request line: GET /cgi-bin/test3 HTTP/1.0
+[INFO]HTTP status code: 403
+[INFO]Content-Length: N/A
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 18:18:40 2012
+[INFO]Request line: GET /cgi-bin/test3 HTTP/1.1
+[INFO]HTTP status code: 403
+[INFO]Content-Length: N/A
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 18:18:40 2012
+[INFO]Request line: GET / HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 18:18:44 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length: N/A
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 18:19:21 2012
+[INFO]Request line: GET /cgi-bin/test3 HTTP/1.1
+[INFO]HTTP status code: 403
+[INFO]Content-Length: N/A
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 18:19:29 2012
+[INFO]Request line: GET /cgi-bin/test3 HTTP/1.0
+[INFO]HTTP status code: 403
+[INFO]Content-Length: N/A
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 18:20:39 2012
+[INFO]Request line: GET /cgi-bin/test3 HTTP/1.1
+[INFO]HTTP status code: 403
+[INFO]Content-Length: N/A
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 18:20:39 2012
+[INFO]Request line: GET / HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 18:20:43 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length: N/A
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 18:20:48 2012
+[INFO]Request line: GET /cgi-bin/test3 HTTP/1.1
+[INFO]HTTP status code: 403
+[INFO]Content-Length: N/A
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 18:20:48 2012
+[INFO]Request line: GET /cgi-bin/test3 HTTP/1.1
+[INFO]HTTP status code: 403
+[INFO]Content-Length: N/A
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 18:20:54 2012
+[INFO]Request line: GET /cgi-bin/test3 HTTP/1.0
+[INFO]HTTP status code: 403
+[INFO]Content-Length: N/A
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 18:22:01 2012
+[INFO]Request line: GET /cgi-bin/test3 HTTP/1.1
+[INFO]HTTP status code: 403
+[INFO]Content-Length: N/A
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 18:22:01 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length: N/A
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 18:34:05 2012
+[INFO]Request line: GET /cgi-bin/test3 HTTP/1.1
+[INFO]HTTP status code: 403
+[INFO]Content-Length:105
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 18:34:05 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length:96
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 18:35:07 2012
+[INFO]Request line: GET /cgi-bin/test3 HTTP/1.1
+[INFO]HTTP status code: 403
+[INFO]Content-Length:105
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 18:35:07 2012
+[INFO]Request line: GET /cgi-bin/test3 HTTP/1.1
+[INFO]HTTP status code: 403
+[INFO]Content-Length:105
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 18:35:14 2012
+[INFO]Request line: GET /cgi-bin/test3 HTTP/1.0
+[INFO]HTTP status code: 403
+[INFO]Content-Length:105
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 18:36:41 2012
+[INFO]Request line: GET /cgi-bin/test3 HTTP/1.1
+[INFO]HTTP status code: 403
+[INFO]Content-Length:105
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 18:36:41 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length:96
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 18:36:36 2012
+[INFO]Request line: GET /cgi-bin/test3 HTTP/1.0
+[INFO]HTTP status code: 403
+[INFO]Content-Length:105
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 18:38:47 2012
+[INFO]Request line: GET /cgi-bin/test3 HTTP/1.1
+[INFO]HTTP status code: 403
+[INFO]Content-Length:105
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 18:38:47 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length:96
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 18:40:16 2012
+[INFO]Request line: GET /cgi-bin/test3 HTTP/1.1
+[INFO]HTTP status code: 403
+[INFO]Content-Length:105
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 18:40:16 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length:96
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 18:40:39 2012
+[INFO]Request line: GET /cgi-bin/test3 HTTP/1.0
+[INFO]HTTP status code: 403
+[INFO]Content-Length:105
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 18:41:06 2012
+[INFO]Request line: GET
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 18:59:36 2012
+[INFO]Request line: GET /pic.png HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 22441
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 18:59:36 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length:96
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 19:15:21 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 143
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 19:15:32 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 143
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 19:15:39 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 143
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 19:15:40 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length:96
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 19:15:44 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length:96
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 19:18:44 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 146
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 19:18:44 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 146
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 19:18:44 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length:96
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 19:18:47 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length:96
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 19:26:12 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length:96
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 19:40:12 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length:96
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 19:40:17 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length:96
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 19:40:26 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length:96
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 19:56:11 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 146
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 19:56:11 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 146
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 19:56:12 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length:96
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 19:56:57 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 146
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 19:56:57 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 146
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 19:56:57 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length:96
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 19:57:01 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length:96
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 20:22:28 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 146
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 20:22:28 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 146
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 20:22:28 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length:96
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 20:22:37 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length:96
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 20:23:28 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 146
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 20:23:28 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 146
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 20:23:29 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length:96
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 20:23:37 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length:96
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 20:26:07 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 146
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 20:26:07 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 146
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 20:26:08 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length:96
+
+data=asdfsafdata=asdfsaf[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 20:26:11 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length:96
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 20:28:23 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 146
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 20:28:23 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 146
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 20:28:23 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length:96
+
+data=asfsafsadata=asfsafsa[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 20:28:27 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length:96
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 20:30:11 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 146
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 20:30:11 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 146
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 20:30:11 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length:96
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 20:30:14 2012
+[INFO]Request line: POST /cgi-bin/post.cgi HTTP/1.1
+[INFO]HTTP status code: 500
+[INFO]Content-Length:122
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 20:30:14 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length:96
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 20:31:37 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 146
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 20:31:37 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 146
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 20:31:38 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length:96
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 20:31:41 2012
+[INFO]Request line: POST /cgi-bin/post.cgi HTTP/1.1
+[INFO]HTTP status code: 500
+[INFO]Content-Length:122
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 20:31:41 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length:96
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 20:32:47 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 146
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 20:32:47 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 146
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 20:32:48 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length:96
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 20:32:52 2012
+[INFO]Request line: POST /cgi-bin/post.cgi HTTP/1.1
+[INFO]HTTP status code: 500
+[INFO]Content-Length:122
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 20:32:52 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length:96
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 20:34:43 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 146
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 20:34:43 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 146
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 20:34:44 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length:96
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 20:34:47 2012
+[INFO]Request line: POST /cgi-bin/post.cgi HTTP/1.1
+[INFO]HTTP status code: 500
+[INFO]Content-Length:122
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 20:34:47 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length:96
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 20:36:47 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 146
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 20:36:47 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 146
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 20:36:47 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length:96
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 20:36:51 2012
+[INFO]Request line: POST /cgi-bin/post.cgi HTTP/1.1
+[INFO]HTTP status code: 500
+[INFO]Content-Length:122
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 20:36:51 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length:96
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 21:05:28 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 146
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 21:05:28 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 146
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 21:05:29 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length:96
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 21:05:33 2012
+[INFO]Request line: POST /cgi-bin/post.cgi HTTP/1.1
+[INFO]HTTP status code: 500
+[INFO]Content-Length:122
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 21:05:34 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length:96
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 21:17:12 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 146
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 21:17:12 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 146
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 21:17:13 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length:96
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 21:17:16 2012
+[INFO]Request line: POST /cgi-bin/post.cgi HTTP/1.1
+[INFO]HTTP status code: 500
+[INFO]Content-Length:122
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 21:17:16 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length:96
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 21:19:32 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 146
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 21:19:32 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 146
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 21:19:32 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length:96
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 21:19:36 2012
+[INFO]Request line: POST /cgi-bin/post.cgi HTTP/1.1
+[INFO]HTTP status code: 500
+[INFO]Content-Length:122
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 21:19:36 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length:96
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 21:19:55 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 146
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 21:19:55 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 146
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 21:19:55 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length:96
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 21:19:58 2012
+[INFO]Request line: POST /cgi-bin/post.cgi HTTP/1.1
+[INFO]HTTP status code: 500
+[INFO]Content-Length:122
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 21:19:58 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length:96
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 21:23:29 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 146
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 21:23:29 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 146
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 21:23:30 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length:96
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 21:23:34 2012
+[INFO]Request line: POST /cgi-bin/post.cgi HTTP/1.1
+[INFO]HTTP status code: 500
+[INFO]Content-Length:122
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 21:23:34 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length:96
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 21:26:29 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 146
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 21:26:29 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 146
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 21:26:30 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length:96
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 21:30:49 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 146
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 21:30:49 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 146
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 21:30:50 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length:96
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 21:30:55 2012
+[INFO]Request line: POST /cgi-bin/post.cgi HTTP/1.1
+[INFO]HTTP status code: 500
+[INFO]Content-Length:122
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 21:30:55 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length:96
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 21:33:49 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 146
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 21:33:49 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 146
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 21:33:50 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length:96
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 21:33:53 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length:96
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 21:35:34 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 146
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 21:35:34 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 146
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 21:35:34 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length:96
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 21:35:38 2012
+[INFO]Request line: POST /cgi-bin/post.cgi HTTP/1.1
+[INFO]HTTP status code: 500
+[INFO]Content-Length:122
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 21:35:38 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length:96
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 21:36:23 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 146
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 21:36:23 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 146
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 21:36:23 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length:96
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 21:36:28 2012
+[INFO]Request line: POST /cgi-bin/post.cgi HTTP/1.1
+[INFO]HTTP status code: 500
+[INFO]Content-Length:122
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 21:36:28 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length:96
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 21:38:09 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 146
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 21:38:09 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 146
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 21:38:10 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length:96
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 21:38:12 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length:96
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 21:39:32 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 146
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 21:39:32 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 146
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 21:39:33 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length:96
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 21:39:38 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length:96
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 21:52:54 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 142
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 21:52:54 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 142
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 21:52:54 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length:96
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 21:52:58 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length:96
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 21:56:53 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 142
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 21:56:53 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 142
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 21:56:54 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length:96
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 21:56:57 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length:96
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 22:00:54 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 142
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 22:00:54 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 142
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 22:00:55 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length:96
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 22:02:31 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 142
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 22:02:31 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 142
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 22:02:31 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length:96
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 22:02:35 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length:96
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 22:03:47 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 142
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 22:03:47 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 142
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 22:03:48 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length:96
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 22:03:52 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length:96
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 22:05:04 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 142
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 22:05:04 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 142
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 22:05:05 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length:96
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 22:05:08 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length:96
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 22:05:53 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 146
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 22:05:53 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 146
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 22:05:53 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length:96
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 22:05:56 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length:96
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 22:09:53 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 146
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 22:09:53 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 146
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 22:09:53 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length:96
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 22:10:06 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length:96
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 22:13:22 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 146
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 22:13:22 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 146
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 22:13:22 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length:96
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 22:13:26 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length:96
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 23:15:29 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 146
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 23:15:29 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 146
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 23:15:29 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length:96
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 23:18:14 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 146
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 23:18:14 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 146
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 23:18:15 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length:96
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 23:19:41 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 146
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 23:19:41 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 146
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 23:19:42 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length:96
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 23:21:00 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 146
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 23:21:00 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 146
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 23:21:00 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length:96
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 23:21:06 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length:96
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 23:23:53 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 146
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 23:23:53 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 146
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 23:23:54 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length:96
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 23:23:58 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length:96
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 23:24:43 2012
+[INFO]Request line: GET /cgi-bin/test3 HTTP/1.1
+[INFO]HTTP status code: 403
+[INFO]Content-Length:105
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 23:24:43 2012
+[INFO]Request line: GET /cgi-bin/test3 HTTP/1.1
+[INFO]HTTP status code: 403
+[INFO]Content-Length:105
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 23:24:44 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length:96
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 23:25:41 2012
+[INFO]Request line: GET /cgi-bin/test3 HTTP/1.1
+[INFO]HTTP status code: 500
+[INFO]Content-Length:122
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 23:25:41 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length:96
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 23:28:25 2012
+[INFO]Request line: GET /cgi-bin/test HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length:96
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 23:28:25 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length:96
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 23:28:34 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 146
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 23:28:34 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 146
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 23:28:34 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length:96
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 23:28:38 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length:96
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 23:28:59 2012
+[INFO]Request line: GET /fdsafdsa HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length:96
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 23:28:59 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length:96
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 23:29:15 2012
+[INFO]Request line: GET /cgi-bin/test3 HTTP/1.1
+[INFO]HTTP status code: 500
+[INFO]Content-Length:122
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 23:29:26 2012
+[INFO]Request line: GET /cgi-bin/test3 HTTP/1.1
+[INFO]HTTP status code: 500
+[INFO]Content-Length:122
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sat Dec 15 23:29:26 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length:96
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sun Dec 16 00:07:27 2012
+[INFO]Request line: GET /~cc HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 18
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sun Dec 16 00:07:27 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length:96
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sun Dec 16 00:09:33 2012
+[INFO]Request line: GET /~cc/ HTTP/1.0
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 18
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sun Dec 16 00:11:21 2012
+[INFO]Request line: GET /~cc/ HTTP/1.0
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 18
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sun Dec 16 00:11:31 2012
+[INFO]Request line: GET /~cc HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 18
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sun Dec 16 00:11:31 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length:96
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sun Dec 16 00:11:46 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 146
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sun Dec 16 00:11:46 2012
+[INFO]Request line: GET /testdir HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 32
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sun Dec 16 00:11:49 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length:96
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sun Dec 16 00:18:07 2012
+[INFO]Request line: GET /testdir HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 119
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sun Dec 16 00:18:07 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length:96
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sun Dec 16 00:19:00 2012
+[INFO]Request line: GET /testdir HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 119
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sun Dec 16 00:19:00 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length:96
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sun Dec 16 00:19:57 2012
+[INFO]Request line: GET /~cc HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 78
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sun Dec 16 00:19:57 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length:96
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sun Dec 16 00:20:03 2012
+[INFO]Request line: GET / HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 29
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sun Dec 16 00:20:03 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length:96
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sun Dec 16 00:33:09 2012
+[INFO]Request line: GET /../../../testdir HTTP/1.0
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 119
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sun Dec 16 00:34:47 2012
+[INFO]HTTP status code: 411
+[INFO]Content-Length:115
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sun Dec 16 00:35:05 2012
+[INFO]Request line: POST / HTTP/1.0
+[INFO]HTTP status code: 405
+[INFO]Content-Length:116
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sun Dec 16 00:41:45 2012
+[INFO]Request line: POST /cgi-bin/read HTTP/1.0
+[INFO]HTTP 200 request OK
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sun Dec 16 00:41:45 2012
+[INFO]Request line: POST /cgi-bin/read HTTP/1.0
+[INFO]HTTP 200 request OK
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sun Dec 16 00:42:50 2012
+[INFO]Request line: POST /cgi-bin/post.cgi HTTP/1.0
+[INFO]HTTP 200 request OK
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sun Dec 16 00:42:50 2012
+[INFO]Request line: POST /cgi-bin/post.cgi HTTP/1.0
+[INFO]HTTP 200 request OK
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sun Dec 16 00:43:50 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 146
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sun Dec 16 00:43:50 2012
+[INFO]Request line: GET /test HTTP/1.1
+[INFO]HTTP status code: 200
+[INFO]Response Content-Length : 146
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sun Dec 16 00:43:50 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length:96
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sun Dec 16 00:43:53 2012
+[INFO]Request line: POST /cgi-bin/post.cgi HTTP/1.1
+[INFO]HTTP 200 request OK
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sun Dec 16 00:43:53 2012
+[INFO]Request line: POST /cgi-bin/post.cgi HTTP/1.1
+[INFO]HTTP 200 request OK
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sun Dec 16 00:43:53 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length:96
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sun Dec 16 00:45:38 2012
+[INFO]Request line: GET /cgi-bin/test3 HTTP/1.1
+[INFO]HTTP 200 request OK
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sun Dec 16 00:45:38 2012
+[INFO]Request line: GET /cgi-bin/test3 HTTP/1.1
+[INFO]HTTP 200 request OK
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sun Dec 16 00:45:38 2012
+[INFO]Request line: GET /cgi-bin/test3 HTTP/1.1
+[INFO]HTTP 200 request OK
+[INFO]HTTP status code: 500
+[INFO]Content-Length:122
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sun Dec 16 00:45:38 2012
+[INFO]Request line: GET /cgi-bin/test3 HTTP/1.1
+[INFO]HTTP 200 request OK
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sun Dec 16 00:45:38 2012
+[INFO]Request line: GET /cgi-bin/test3 HTTP/1.1
+[INFO]HTTP 200 request OK
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sun Dec 16 00:45:38 2012
+[INFO]Request line: GET /cgi-bin/test3 HTTP/1.1
+[INFO]HTTP 200 request OK
+[INFO]HTTP status code: 500
+[INFO]Content-Length:122
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sun Dec 16 00:45:40 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length:96
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sun Dec 16 00:46:11 2012
+[INFO]Request line: GET /cgi-bin/test3 HTTP/1.1
+[INFO]HTTP 200 request OK
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sun Dec 16 00:46:11 2012
+[INFO]Request line: GET /cgi-bin/test3 HTTP/1.1
+[INFO]HTTP 200 request OK
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sun Dec 16 00:46:11 2012
+[INFO]Request line: GET /cgi-bin/test3 HTTP/1.1
+[INFO]HTTP 200 request OK
+[INFO]HTTP status code: 500
+[INFO]Content-Length:122
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sun Dec 16 00:46:11 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length:96
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sun Dec 16 01:10:23 2012
+[INFO]Request line: GET /cgi-bin/test3 HTTP/1.1
+[INFO]HTTP 200 request OK
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sun Dec 16 01:10:23 2012
+[INFO]Request line: GET /cgi-bin/test3 HTTP/1.1
+[INFO]HTTP 200 request OK
+[INFO]HTTP status code: 500
+[INFO]Content-Length:122
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sun Dec 16 01:10:23 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length:96
+
+[INFO]One request comes from IP address: ::ffff:127.0.0.1
+[INFO]The request conclusion:
+[INFO]Request time: Sun Dec 16 01:11:00 2012
+[INFO]Request line: GET /favicon.ico HTTP/1.1
+[INFO]HTTP status code: 404
+[INFO]Content-Length:96
+

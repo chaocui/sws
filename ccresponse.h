@@ -20,6 +20,11 @@
 #define NOT_VALID 2
 #define CGI_LEN 9
 
+extern int l_flag;
+extern int logfd;
+extern char loginfo[1024];
+extern int d_flag;
+
 typedef struct s_node *Stack;
 typedef Stack Next;
 typedef Stack Top;
@@ -80,7 +85,7 @@ void senddata(int fd, int sockdes);
 * @protocol, request prototcol
 * @server_root, the server root directory.
 */
-void response(int client_fd, char *method, char *path, char *protocol, char *server_root);
+void response(int client_fd, char *method, char *path, char *protocol, char *server_root, char *postdata);
 
 /*
 * The CGI interface used in sws.c
@@ -90,9 +95,9 @@ void response(int client_fd, char *method, char *path, char *protocol, char *ser
 * The only difference is 
 * @cgi_root, indicate the web server's cgi root directory
 */
-void cgi_response(int client_fd, char *method, char *path, char *protocol, char *cgi_root);
+void cgi_response(int client_fd, char *method, char *path, char *protocol, char *cgi_root, char *postdata);
 
-void cgi_process(char *requestdir, int client_fd, char *path, char *protocol);
+void cgi_process(char *requestdir, int client_fd, char *path, char *protocol, char *postdata);
 /*
 * Header generater based on different status code
 * @client_fd, the web socket descriptor we will write data to
@@ -107,11 +112,13 @@ void cgi_process(char *requestdir, int client_fd, char *path, char *protocol);
 */
 void header(int client_fd,int status,struct stat stat_buf,int dirlen);
 
+void error_content(int client_fd, int status);
+
 void push(Stack node, Top top);
 Stack pop(Top top);
 void cc_realpath(char *requestdir, char *resolvedpath);
 
-void response(int client_fd, char *method, char *path, char *protocol, char *server_root){
+void response(int client_fd, char *method, char *path, char *protocol, char *server_root, char *postdata){
 
 	/*
 	* Normal case, handling reques like:
@@ -153,13 +160,13 @@ void response(int client_fd, char *method, char *path, char *protocol, char *ser
 			else
 				break;		
 		}	
-		printf("pull the personname : %s out \n",personname);		
+//		printf("pull the personname : %s out \n",personname);		
 		char personroot[MAX_LEN] = "";
 		strcpy(personroot,"/home/");
 		strcat(personroot,personname);
 		strcat(personroot,"/");
 		strcat(personroot,"sws/");	
-		printf("personroot: %s \n",personroot);
+//		printf("personroot: %s \n",personroot);
 		
 		char requestdir[MAX_LEN] = "";		
 		strcpy(requestdir,personroot);
@@ -168,7 +175,7 @@ void response(int client_fd, char *method, char *path, char *protocol, char *ser
 		for(j = 0; i < strlen(path); i++,j++)
 			temp[j] = path[i]; 	
 		strcat(requestdir,temp);		
-		printf("requestdir is %s \n",requestdir);
+//		printf("requestdir is %s \n",requestdir);
 
 		int validresult = validation(requestdir,personroot);
 		if(validresult == VALID)
@@ -180,15 +187,20 @@ void response(int client_fd, char *method, char *path, char *protocol, char *ser
 
 int validation(char *requestdir, char *rootdir){
 
+	if(d_flag == 1)
+		printf("[INFO]Startging to verify the request URL ...\n");
 	/*
 	* The realpath used to remove the .. and . in a path, to get the real absolute path
 	*/
 	char path[MAX_LEN] = "";
 	
+	if(d_flag == 1)
+		printf("[INFO]Translating the relative path to absolute path ... \n");
+
 	cc_realpath(requestdir,path);
 	
-	printf("requestdir: %s\n",requestdir);
-	printf("real path: %s\n",path);
+//	printf("requestdir: %s\n",requestdir);
+//	printf("real path after cc_realpath: %s\n",path);
 
 	/*
 	* Compare the path with root dir,
@@ -210,8 +222,11 @@ int validation(char *requestdir, char *rootdir){
 	* It means that the request dir has the same prefix of the root dir
 	* Than it is a valid request
 	*/
-	if(i == strlen(rootdir)) 
+	if(i == strlen(rootdir)){ 
+		if(d_flag == 1)
+			printf("[INFO]Rquest URL is not out of bound\n");
 		return VALID;
+	}
 
 	/*
 	* If i equals to the length of the request dir(path)
@@ -220,8 +235,11 @@ int validation(char *requestdir, char *rootdir){
 	* But the return value is NOT_VALID, this means we will use the root dir
 	* For this condition, we don't need to modify the root dir.
 	*/
-	else if(i == strlen(path))
+	else if(i == strlen(path)){
+		if(d_flag == 1)
+			printf("[INFO]Request URL is out of root, automatically transfer URL back to root ...\n");
 		return NOT_VALID;
+	}
 
 	/*
 	* If i doesn't equal to length of root dir and request dir
@@ -262,8 +280,10 @@ int validation(char *requestdir, char *rootdir){
 
 		//concatenate it to the root
 		strcat(rootdir,temp);	
-		printf("trace the rootdir after validation: %s\n",rootdir);		
-
+//		printf("trace the rootdir after validation: %s\n",rootdir);		
+		
+		if(d_flag == 1)
+			printf("[INFO]Request URL is out of root, automatically transfer URL back to root ...\n");
 		//then return NOT_VALID
 		return NOT_VALID;
 	}
@@ -271,7 +291,7 @@ int validation(char *requestdir, char *rootdir){
 	return 0;
 }
 
-void cgi_response(int client_fd, char *method, char *path, char *protocol, char *cgi_root){
+void cgi_response(int client_fd, char *method, char *path, char *protocol, char *cgi_root, char *postdata){
 	
 	/*
 	* Get the path after the /cgi_bin/
@@ -286,21 +306,24 @@ void cgi_response(int client_fd, char *method, char *path, char *protocol, char 
 	char requestdir[MAX_LEN];
 	strcpy(requestdir,cgi_root);
 	strcat(requestdir,"/");
-	printf("tempdir, %s \n %d \n", tempdir, templen);
+//	printf("tempdir, %s \n %d \n", tempdir, templen);
 	strcat(requestdir,tempdir);
-	printf("in cgi response, requestdir: %s \n           cgiroot: %s\n", requestdir, cgi_root);
+//	printf("in cgi response, requestdir: %s \n           cgiroot: %s\n", requestdir, cgi_root);
 	
 	int validresult = validation(requestdir,cgi_root);
 	
-	//If the request URL is valid, use the reques dir directly
+	/*
+	* If the request URL is valid, use the reques dir directly
+	*/
 	if(validresult == VALID){
-		printf("VALID request dir: %s \n", requestdir);
-		cgi_process(requestdir,client_fd,method,protocol);
+		cgi_process(requestdir,client_fd,method,protocol,postdata);
 	}
-	//If the request URL is not valid, use the cgi_root which has been modified in the validation function
+		
+	/*
+	* If the request URL is not valid, use the cgi_root which has been modified in the validation function
+	*/
 	if(validresult == NOT_VALID){
-		printf("NOT VALID cgi_root: %s \n", cgi_root);
-		cgi_process(cgi_root,client_fd,method,protocol);	
+		cgi_process(cgi_root,client_fd,method,protocol,postdata);	
 	}	
 }
 
@@ -310,12 +333,12 @@ void responsetime(int client_fd){
 	t = time(NULL);
 	buf = ctime(&t);
 	write(client_fd,"Date: ",6);
-	write(client_fd,buf,30);
+	write(client_fd,buf,strlen(buf));
 }
 
 void serverinfo(int client_fd){
 	char info[] = "SERVER INFOMATION: simple web server, version 1.0\n";
-	write(client_fd,info,sizeof(info));	
+	write(client_fd,info,strlen(info));	
 }
 
 void senddata(int fd, int sockdes){
@@ -334,6 +357,13 @@ void do_process(char *path, char *method, int client_fd, char *protocol){
 
 	int status, fd;
 	struct stat stat_buf;
+	
+	//These files doesn't support POST method
+	if(strcmp(method,"POST") == 0){
+		status = 405;
+		header(client_fd,status,stat_buf,0);
+		exit(0);
+	}
 	
 	// no such file, 404 not found returns
 	if(access(path,F_OK) != 0){
@@ -387,7 +417,7 @@ void do_process(char *path, char *method, int client_fd, char *protocol){
 		dir_process(client_fd,stat_buf,method,path);	
 }
 		
-void cgi_process(char *path, int client_fd, char *method, char *protocol){
+void cgi_process(char *path, int client_fd, char *method, char *protocol, char *postdata){
 	
 	int status;
 	struct stat stat_buf;
@@ -417,22 +447,100 @@ void cgi_process(char *path, int client_fd, char *method, char *protocol){
 		}
 
 		else{ //do execution
-			int pid;
 			
-			if((pid = fork()) < 0){
-				status = SERVER_ERROR;
-				header(client_fd,status,stat_buf,0);
-				exit(0);
-			}
-			
-			if(pid == 0){ //fork a child to do execution
-				char *env_init[] = {"PATH=/tmp,NULL"};				
-				//redirect the output of the execution result to the socket descriptor
-				dup2(client_fd,1);	
-				if(execle(path,"",(char *)0,env_init) < 0){
+			/*
+			* If it is a GET CGI request.
+			* The data send to the CGI is stored in the environment QUERY_STRING.
+			*/
+			if(strcmp(method,"GET") == 0){
+				int pid;
+				
+				write(client_fd,"HTTP 200 request OK\n",20);
+				strcat(loginfo,"[INFO]HTTP 200 request OK\n");
+				
+				if(d_flag == 1)
+					printf("%s",loginfo);
+
+				write(logfd,loginfo,strlen(loginfo));
+
+				responsetime(client_fd);
+				serverinfo(client_fd);
+
+				if((pid = fork()) < 0){
 					status = SERVER_ERROR;
 					header(client_fd,status,stat_buf,0);
-					exit(0);	
+					exit(0);
+				}
+
+				if(pid == 0){ //fork a child to do execution
+					char *env_init[] = {"PATH=/tmp,NULL"};				
+					//redirect the output of the execution result to the socket descriptor
+					dup2(client_fd,STDOUT_FILENO);	
+					if(execle(path,"",(char *)0,env_init) < 0){
+						status = SERVER_ERROR;
+						header(client_fd,status,stat_buf,0);
+						exit(0);	
+					}
+				}
+			}
+			
+			/*
+			* If it is POST CGI request.
+			* Then, the the data is send to the child process
+			* The CGI script will read the data from standard in stream
+			* The data length is stored in the environment CONTENT_LENGTH;
+			*/
+			if(strcmp(method,"POST") == 0){
+				int pid;
+			
+				int fd[2];
+				close(fd[0]);
+				/*
+				* Create a pipe, the parent process send the postdata to the pipe
+				* The child process read the data from the pipe.
+				* Redirect the fd[0] of this pipe to the stdin.
+				* The CGI script will read the postdata from stdin.
+				*/
+				if(pipe(fd) < 0){
+					status = SERVER_ERROR;
+					header(client_fd,status,stat_buf,0);
+					exit(0);
+				}
+//				printf("postdata %s\n",postdata);
+				write(fd[1],postdata,strlen(postdata));
+
+				/*
+				* CGI execution success header
+				*/
+				write(client_fd,"HTTP 200 request OK\n",20);
+				strcat(loginfo,"[INFO]HTTP 200 request OK\n");
+				
+				if(d_flag == 1)
+					printf("%s",loginfo);
+
+				write(logfd,loginfo,strlen(loginfo));
+				
+				responsetime(client_fd);
+				serverinfo(client_fd);
+				if((pid = fork()) < 0){
+					status = SERVER_ERROR;
+					header(client_fd,status,stat_buf,0);
+					exit(0);
+				}
+
+				if(pid != 0){ //fork a child to do execution
+					char *env_init[] = {"PATH=/home/cc/homework_CS631/final631/sws/cgi_bin","CONTENT_LENGTH=20",NULL};				
+
+					close(fd[1]);
+					dup2(fd[0],STDIN_FILENO);
+					//redirect the output of the execution result to the temp file 
+					dup2(client_fd,STDOUT_FILENO);
+					if(execle(path,"",(char *)0,env_init) < 0){
+						perror(strerror(errno));
+						status = SERVER_ERROR;
+						header(client_fd,status,stat_buf,0);
+						exit(0);	
+					}
 				}
 			}
 		}	
@@ -445,38 +553,126 @@ void header(int client_fd,int status, struct stat stat_buf, int dirlen){
 	
 	//if the status code is request ok, send the header based on the stat_buf parameter.
 	if(status == REQUEST_OK){
-		write(client_fd, "http 200 request OK\n", 20);
+		write(client_fd, "HTTP 200 request OK\n", 20);
+		strcat(loginfo,"[INFO]HTTP status code: 200\n");
 		responsetime(client_fd);
 		serverinfo(client_fd);
-		char buf[300];
+		char buf[300] = "";
 
 		//scan the file information into the buf
-		int j = sprintf(buf,"Last Modification time : %s",ctime(&stat_buf.st_mtime));		
-		j += sprintf(buf+j,"Content type: test/html\n");
-		if(!S_ISDIR(stat_buf.st_mode))
-			j += sprintf(buf+j,"Content length: %d\n\n",(int)stat_buf.st_size);
-		if(S_ISDIR(stat_buf.st_mode))
-			j += sprintf(buf+j,"Content length: %d\n\n",dirlen);
+		int j = sprintf(buf,"Last-Modification-Time : %s",ctime(&stat_buf.st_mtime));		
+		j += sprintf(buf+j,"Content-Type: text/html\n");
+		if(!S_ISDIR(stat_buf.st_mode)){
+			j += sprintf(buf+j,"Content-Length: %d\n\n",(int)stat_buf.st_size);
+			char temp[100] = "";
+			sprintf(temp,"[INFO]Response Content-Length : %d\n\n",(int)stat_buf.st_size);
+			strcat(loginfo,temp);
+		}
+		if(S_ISDIR(stat_buf.st_mode)){
+			j += sprintf(buf+j,"Content-Length: %d\n\n",dirlen);
+			char temp[100] = "";
+			sprintf(temp,"[INFO]Response Content-Length : %d\n\n",dirlen);
+			strcat(loginfo,temp);
+		}
 	
+		if(l_flag == 1)
+			write(logfd,loginfo,strlen(loginfo));
+
+		if(d_flag == 1){
+			loginfo[strlen(loginfo) - 1] = 0;
+			printf("%s",loginfo);
+		}
 		write(client_fd,buf,j);
 	}
 
 	//if other status code, we don't need stat_buf info, because the last three information will be N/A
 	else{
-		if(status == SERVER_ERROR)
-			write(client_fd,"http 500 server inner error\n",28);
-		if(status == NOT_FOUND)
-			write(client_fd, "http 404 not found\n",19);
-		if(status == BAD_REQUEST)
-			write(client_fd,"http 400 bad request\n",21);
-		if(status == PERMISSION) 
-			write(client_fd, "http 403 permission denied\n", 27);
+		if(status == 405){
+			write(client_fd,"HTTP 405 method not allowed\n",28);
+			strcat(loginfo,"[INFO]HTTP status code: 405\n");
+		}
+		if(status == 411){
+			write(client_fd,"HTTP 411 length required\n",25);
+			strcat(loginfo,"[INFO]HTTP status code: 411\n");
+		}
+		
+		if(status == 505){
+			write(client_fd,"HTTP 501 not implemented\n",25);
+			strcat(loginfo,"[INFO]HTTP status code: 501\n");
+		}
+			
+		if(status == SERVER_ERROR){
+			write(client_fd,"HTTP 500 server inner error\n",28);
+			strcat(loginfo,"[INFO]HTTP status code: 500\n");
+		}
+		if(status == NOT_FOUND){
+			write(client_fd, "HTTP 404 not found\n",19);
+			strcat(loginfo,"[INFO]HTTP status code: 404\n");
+		}
+		if(status == BAD_REQUEST){
+			write(client_fd,"HTTP 400 bad request\n",21);
+			strcat(loginfo,"[INFO]HTTP status code: 400\n");
+		}
+		if(status == PERMISSION){ 
+			write(client_fd, "HTTP 403 permission denied\n", 27);
+			strcat(loginfo,"[INFO]HTTP status code: 403\n");
+		}
 		responsetime(client_fd);
 		serverinfo(client_fd);
-		write(client_fd,"Last modification time: N/A\n",28);
-		write(client_fd,"content type: N/A\n",18);	
-		write(client_fd,"content length: N/A\n",20);
-		write(client_fd,"\n",1);
+		write(client_fd,"Last-Modification-Time: N/A\n",28);
+		write(client_fd,"Content-Type: text/html\n",24);	
+
+		char temp[30] = "";
+		char detail[100]  = "";
+		if(status == 400){
+			strcpy(temp,"Bad Request");
+			strcpy(detail,"\n");
+		}
+		if(status == 403){
+			strcpy(temp,"Permission denied");
+			strcpy(detail,"\nHave no access permission to the request item\n");
+		}
+		if(status == 404){
+			strcpy(temp,"Not Found");
+			strcpy(detail,"\nThe request file is not found on this server\n");
+		}
+		if(status == 405){
+			strcpy(temp,"Method not allowed");
+			strcpy(detail,"\nThe file you request does not allow a POST method on it\n");
+		}
+		if(status == 411){
+			strcpy(temp,"length required");
+			strcpy(detail,"\nPOST request need a Content-Length: in the reqeust header\n");
+		}
+		if(status == 500){
+			strcpy(temp,"server inner error");
+			strcpy(detail,"\nError occur inside the server, cannot response to the request\n");
+		}
+		if(status == 501){
+			strcpy(temp,"not implemented");
+			strcpy(detail,"\nMethod is not imeplmented, only support GET POST HEAD\n");
+		}
+		char buf[300] = "";
+		int len = 0;
+		len = sprintf(buf,"<HTML>\n<H4> HTTP %d %s error</H4>",status,temp);
+		len += sprintf(buf+len," %s</HTML>\n", detail);
+
+		char contentlen[300] = "";
+		sprintf(contentlen,"Content-Length:%d\n\n",len);
+
+		write(client_fd,contentlen,strlen(contentlen));
+		strcat(loginfo,"[INFO]");
+		strcat(loginfo,contentlen);
+
+		write(client_fd,buf,len);
+
+		if(l_flag == 1)
+			write(logfd,loginfo,strlen(loginfo));
+
+		if(d_flag == 1){
+			loginfo[strlen(loginfo) - 1] = 0;
+			printf("%s",loginfo);
+		}
 	}
 }
 
@@ -509,7 +705,7 @@ void cc_realpath(char *path, char *resolvedpath){
 	* If it is a ., because we have pushed it on to the stack at previous operation, we need to pop it out.
 	* After this component is done, we reset j to 1.(j is 1 initially because each component at least has one character that is /) 
 	*/
-	for(i = templen - 1; i >= 0; i --){
+	for(i = templen; i >= 0; i --){
 		
 		//Get the length of each component
 		if(remaining[i] != '/')
@@ -525,7 +721,8 @@ void cc_realpath(char *path, char *resolvedpath){
 			for(m = 0; m < j; m++)
 				node -> component[m] = remaining[i+m];
 				
-			printf("each component %s \n", node -> component);
+		//	node ->	component[m+1] = 0;
+		//	printf("each component %s \n", node -> component);
 
 			//If it is not a ..
 			if(strcmp(node -> component, "/..") != 0){
@@ -558,7 +755,7 @@ void cc_realpath(char *path, char *resolvedpath){
 	while(c_stack -> next != NULL){
 		Stack tempstack = pop(c_stack);
 		strcat(resolvedpath,tempstack -> component);
-		printf("trace the result path %s\n",resolvedpath);
+		//printf("trace the result path %s\n",resolvedpath);
 		free(tempstack);
 	}
 }
@@ -635,21 +832,29 @@ void dir_process(int client_fd, struct stat stat_buf,char *method, char *path){
 		else{
 			status = REQUEST_OK;
 			int dirlen = 0;
+			int count = 0;
 		
 			//calculate the total length of the file names under this directory
-			while((dir_buf = readdir(dp)) != NULL)
+			while((dir_buf = readdir(dp)) != NULL){
 				dirlen += strlen(dir_buf -> d_name);
+				count++;
+			}
 		
 			//reset the dp to the begining of this directory
 			rewinddir(dp);
+			dirlen = dirlen + 9*count;
+			dirlen += 15;
 			header(client_fd,status,stat_buf,dirlen);
 			
 			//if the method is get, send the file list back
 			if(strcmp(method,"GET") == 0){
+				write(client_fd,"<HTML>\n",7);
 				while((dir_buf = readdir(dp)) != NULL){
+					write(client_fd,"<br>",4);
 					write(client_fd,dir_buf -> d_name, strlen(dir_buf -> d_name));
-					write(client_fd,"\n",1);
+					write(client_fd,"</br>",5);
 				}
+				write(client_fd,"</HTML>\n",8);
 			}
 			exit(0);
 		}

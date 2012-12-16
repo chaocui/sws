@@ -1,9 +1,8 @@
 #include <stdio.h>
 
 int main(int argc, char **argv){
-	int b = 1234;
-	printf("%d\n",b);
-	printf("%s\n",argv[1]);
+	char line[40] = "";
+	read(0,line,40);
+	printf("%s\n",line);
 	return 0;
-
 }

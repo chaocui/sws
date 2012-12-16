@@ -1,1 +1,4 @@
-asdf
+<FORM ACTION="/cgi-bin/post.cgi" METHOD="POST">
+<INPUT NAME="data" SIZE="60" MAXLENGTH="80"><BR>
+<INPUT TYPE="SUBMIT" VALUE="Send"></DIV>
+</FORM>
