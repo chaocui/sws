@@ -577,7 +577,7 @@ void cgi_process(char *path, int client_fd, char *method, char *protocol, char *
 
 				if(pid == 0){ //fork a child to do execution
 					char temp[MAX_LEN] = "";
-					sprintf(temp,"CONTENT_LENGTH=%d",strlen(postdata));
+					sprintf(temp,"CONTENT_LENGTH=%d",(int)strlen(postdata));
 					char *env_init[] = {"PATH=/home/cc/homework_CS631/final631/sws/cgi_bin",temp,NULL};				
 
 					close(fd[1]);

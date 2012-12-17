@@ -69,17 +69,8 @@ int main(int argc, char **argv){
 	if(l_flag == 1){
 		if(d_flag == 1)
 			printf("[INFO]Checking the validation of log file specified after -l ...\n");		
-	
-		char real_logfile[MAX_LEN] = "";
-		if(realpath(log_file,real_logfile) == NULL){
-			if(d_flag == 1)
-				fprintf(stderr,"[ERROR]The given log file is not in a good path\n");
-			else
-				syslog(LOG_ERR,"[ERROR]The given log file is not in a good path\n");
-			exit(1);	
-		}
 
-		if((logfd = open(real_logfile,O_RDWR | O_APPEND | O_CREAT, S_IRUSR | S_IWUSR | S_IRGRP | S_IROTH)) < 0){
+		if((logfd = open(log_file,O_RDWR | O_APPEND | O_CREAT, S_IRUSR | S_IWUSR | S_IRGRP | S_IROTH)) < 0){
 			if(d_flag == 1)
 				fprintf(stderr,"[ERROR]Open log file error, cannot start server\n");
 			else
