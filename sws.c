@@ -1,3 +1,4 @@
+#define _GNU_SOURCE
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -69,7 +70,16 @@ int main(int argc, char **argv){
 		if(d_flag == 1)
 			printf("[INFO]Checking the validation of log file specified after -l ...\n");		
 	
-		if((logfd = open(log_file,O_RDWR | O_APPEND | O_CREAT, S_IRUSR | S_IWUSR | S_IRGRP | S_IROTH)) < 0){
+		char real_logfile[MAX_LEN] = "";
+		if(realpath(log_file,real_logfile) == NULL){
+			if(d_flag == 1)
+				fprintf(stderr,"[ERROR]The given log file is not in a good path\n");
+			else
+				syslog(LOG_ERR,"[ERROR]The given log file is not in a good path\n");
+			exit(1);	
+		}
+
+		if((logfd = open(real_logfile,O_RDWR | O_APPEND | O_CREAT, S_IRUSR | S_IWUSR | S_IRGRP | S_IROTH)) < 0){
 			if(d_flag == 1)
 				fprintf(stderr,"[ERROR]Open log file error, cannot start server\n");
 			else
@@ -357,7 +367,7 @@ int main(int argc, char **argv){
 							* 501 not implemented error send back
 							*/
 							if(strcmp(check_method,"POST") != 0 && strcmp(check_method,"HEAD") != 0){
-								header(client_fd,505,root_buf,0);
+								header(client_fd,501,root_buf,0);
 								exit(0);
 							}
 							else
@@ -372,7 +382,7 @@ int main(int argc, char **argv){
 						/*
 						* No content-length, break;
 						*/
-						if((lengthbegin = strstr(totalheader,"Content-Length")) == NULL){ //If the request header has no content length
+						if((lengthbegin = strcasestr(totalheader,"Content-Length")) == NULL){ //If the request header has no content length
 							header(client_fd,411,root_buf,0);
 							exit(0);	
 						}
@@ -422,9 +432,21 @@ int main(int argc, char **argv){
 			*/
 			char postdata[datasize];
 			i = 0;
+			char *startpoint = NULL;
+
+			/*
+			* Find the starting point of the postdata.
+			*/
+			startpoint = strstr(totalheader,"\r\n\r\n");
+			startpoint += 4;
+			
+			/*
+			* Fetch the data into postdata buffer
+			*/
 			while(i < datasize){
-				postdata[i] = totalheader[strlen(totalheader) - datasize + i];
+				postdata[i] = *startpoint;
 				i ++;
+				startpoint++;
 			}		
 	
 			/*

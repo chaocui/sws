@@ -14,6 +14,7 @@
 #define PERMISSION 403
 #define SERVER_ERROR 500
 #define REQUEST_OK 200
+#define VERSION_BAD 505
 #define HEAD 0
 #define GET 1
 #define VALID 1
@@ -24,6 +25,7 @@ extern int l_flag;
 extern int logfd;
 extern char loginfo[1024];
 extern int d_flag;
+char querystring[1024] = "";
 
 typedef struct s_node *Stack;
 typedef Stack Next;
@@ -117,6 +119,7 @@ void error_content(int client_fd, int status);
 void push(Stack node, Top top);
 Stack pop(Top top);
 void cc_realpath(char *requestdir, char *resolvedpath);
+int http_check(char* http);
 
 void response(int client_fd, char *method, char *path, char *protocol, char *server_root, char *postdata){
 
@@ -299,16 +302,37 @@ void cgi_response(int client_fd, char *method, char *path, char *protocol, char 
 	* the request is /cgi_bin/subdir/hello
 	* We get the /subdir/hello part
 	*/
-	int templen = strlen(path) - CGI_LEN, i;
+	int templen = strlen(path) - CGI_LEN, i,j;
 	char tempdir[templen + 1];
 	for(i = 0; i < templen + 1; i++)
 		tempdir[i] = path[CGI_LEN + i];
 	char requestdir[MAX_LEN];
 	strcpy(requestdir,cgi_root);
 	strcat(requestdir,"/");
-//	printf("tempdir, %s \n %d \n", tempdir, templen);
+	
+	/*
+	* If it is a GET request, the input value of the request may be after the path.
+	* Here we check that
+	* Format: URL?name=value&name=value 
+	* We need the string after ?
+	*/
+	
+	if(strcmp(method,"GET") == 0){
+		for(i = 0; i < strlen(tempdir); i++){
+			if(tempdir[i] == '?')
+				break;
+		}
+
+		for(j=0; i<strlen(tempdir);i++,j++)
+			querystring[j] = tempdir[i + 1];
+		
+		tempdir[i - j] = 0;
+	}
+	
+	/*
+	* Make the full requestdir path
+	*/
 	strcat(requestdir,tempdir);
-//	printf("in cgi response, requestdir: %s \n           cgiroot: %s\n", requestdir, cgi_root);
 	
 	int validresult = validation(requestdir,cgi_root);
 	
@@ -356,15 +380,23 @@ void senddata(int fd, int sockdes){
 void do_process(char *path, char *method, int client_fd, char *protocol){
 
 	int status, fd;
-	struct stat stat_buf;
-	
+	struct stat stat_buf;	
+
+	//wrong HTTP version 505 error return
+	int version = http_check(protocol);
+	if(version == 0){
+		status = VERSION_BAD;
+		header(client_fd,status,stat_buf,0);
+		exit(0);
+	}
+
 	//These files doesn't support POST method
 	if(strcmp(method,"POST") == 0){
 		status = 405;
 		header(client_fd,status,stat_buf,0);
 		exit(0);
-	}
-	
+	}	
+
 	// no such file, 404 not found returns
 	if(access(path,F_OK) != 0){
 		status = NOT_FOUND;
@@ -422,6 +454,14 @@ void cgi_process(char *path, int client_fd, char *method, char *protocol, char *
 	int status;
 	struct stat stat_buf;
 	
+	//wrong HTTP version 505 error return
+	int version = http_check(protocol);
+	if(version == 0){
+		status = VERSION_BAD;
+		header(client_fd,status,stat_buf,0);
+		exit(0);
+	}
+
 	//Check the existance of the request file
 	if(access(path, F_OK) != 0){
 		status = NOT_FOUND;
@@ -473,7 +513,9 @@ void cgi_process(char *path, int client_fd, char *method, char *protocol, char *
 				}
 
 				if(pid == 0){ //fork a child to do execution
-					char *env_init[] = {"PATH=/tmp,NULL"};				
+					char temp[MAX_LEN] = "";
+					sprintf(temp,"QUERY_STRING=%s",querystring);	
+					char *env_init[] = {"PATH=/tmp",temp,NULL};				
 					//redirect the output of the execution result to the socket descriptor
 					dup2(client_fd,STDOUT_FILENO);	
 					if(execle(path,"",(char *)0,env_init) < 0){
@@ -494,7 +536,6 @@ void cgi_process(char *path, int client_fd, char *method, char *protocol, char *
 				int pid;
 			
 				int fd[2];
-				close(fd[0]);
 				/*
 				* Create a pipe, the parent process send the postdata to the pipe
 				* The child process read the data from the pipe.
@@ -506,34 +547,47 @@ void cgi_process(char *path, int client_fd, char *method, char *protocol, char *
 					header(client_fd,status,stat_buf,0);
 					exit(0);
 				}
-//				printf("postdata %s\n",postdata);
-				write(fd[1],postdata,strlen(postdata));
-
 				/*
 				* CGI execution success header
 				*/
 				write(client_fd,"HTTP 200 request OK\n",20);
 				strcat(loginfo,"[INFO]HTTP 200 request OK\n");
+
+				/*
+				* Write the post data to the child's stdin
+				* The CGI script can use it.
+				*/
+				write(fd[1],postdata,strlen(postdata));
 				
+				/*
+				* Print the debuf info and log the info into file
+				*/
 				if(d_flag == 1)
 					printf("%s",loginfo);
-
 				write(logfd,loginfo,strlen(loginfo));
 				
 				responsetime(client_fd);
-				serverinfo(client_fd);
+				serverinfo(client_fd); 
+				
 				if((pid = fork()) < 0){
 					status = SERVER_ERROR;
 					header(client_fd,status,stat_buf,0);
 					exit(0);
 				}
 
-				if(pid != 0){ //fork a child to do execution
-					char *env_init[] = {"PATH=/home/cc/homework_CS631/final631/sws/cgi_bin","CONTENT_LENGTH=20",NULL};				
+				if(pid == 0){ //fork a child to do execution
+					char temp[MAX_LEN] = "";
+					sprintf(temp,"CONTENT_LENGTH=%d",strlen(postdata));
+					char *env_init[] = {"PATH=/home/cc/homework_CS631/final631/sws/cgi_bin",temp,NULL};				
 
 					close(fd[1]);
+					/*
+					* Redirect the stdin to the pipe's read end  
+					*/
 					dup2(fd[0],STDIN_FILENO);
-					//redirect the output of the execution result to the temp file 
+					/*
+					* redirect the output of the execution result to the socket file descriptor
+					*/
 					dup2(client_fd,STDOUT_FILENO);
 					if(execle(path,"",(char *)0,env_init) < 0){
 						perror(strerror(errno));
@@ -596,11 +650,16 @@ void header(int client_fd,int status, struct stat stat_buf, int dirlen){
 			strcat(loginfo,"[INFO]HTTP status code: 411\n");
 		}
 		
-		if(status == 505){
+		if(status == 501){
 			write(client_fd,"HTTP 501 not implemented\n",25);
 			strcat(loginfo,"[INFO]HTTP status code: 501\n");
 		}
 			
+		if(status == VERSION_BAD){
+			write(client_fd,"HTTP 505 version not support\n",29);
+			strcat(loginfo,"[INFO]HTTP status code 505\n");
+		}
+
 		if(status == SERVER_ERROR){
 			write(client_fd,"HTTP 500 server inner error\n",28);
 			strcat(loginfo,"[INFO]HTTP status code: 500\n");
@@ -628,29 +687,40 @@ void header(int client_fd,int status, struct stat stat_buf, int dirlen){
 			strcpy(temp,"Bad Request");
 			strcpy(detail,"\n");
 		}
+
 		if(status == 403){
 			strcpy(temp,"Permission denied");
 			strcpy(detail,"\nHave no access permission to the request item\n");
 		}
+
 		if(status == 404){
 			strcpy(temp,"Not Found");
 			strcpy(detail,"\nThe request file is not found on this server\n");
 		}
+
 		if(status == 405){
 			strcpy(temp,"Method not allowed");
 			strcpy(detail,"\nThe file you request does not allow a POST method on it\n");
 		}
+
 		if(status == 411){
 			strcpy(temp,"length required");
 			strcpy(detail,"\nPOST request need a Content-Length: in the reqeust header\n");
 		}
+
 		if(status == 500){
 			strcpy(temp,"server inner error");
 			strcpy(detail,"\nError occur inside the server, cannot response to the request\n");
 		}
+
 		if(status == 501){
 			strcpy(temp,"not implemented");
 			strcpy(detail,"\nMethod is not imeplmented, only support GET POST HEAD\n");
+		}
+
+		if(status == 505){
+			strcpy(temp,"version not support");
+			strcpy(detail,"\nThe given version of HTTP is not supported on this server\n");
 		}
 		char buf[300] = "";
 		int len = 0;
@@ -659,16 +729,32 @@ void header(int client_fd,int status, struct stat stat_buf, int dirlen){
 
 		char contentlen[300] = "";
 		sprintf(contentlen,"Content-Length:%d\n\n",len);
-
+		
+		/*
+		* Send the error content length header to client side
+		*/
 		write(client_fd,contentlen,strlen(contentlen));
+
+		/*
+		* Record the log information
+		*/
 		strcat(loginfo,"[INFO]");
 		strcat(loginfo,contentlen);
 
+		/*
+		* Write the actual error content to the client side
+		*/
 		write(client_fd,buf,len);
 
+		/*
+		* Log the request info
+		*/
 		if(l_flag == 1)
 			write(logfd,loginfo,strlen(loginfo));
 
+		/*
+		* Show the request info under debug mode on terminal
+		*/
 		if(d_flag == 1){
 			loginfo[strlen(loginfo) - 1] = 0;
 			printf("%s",loginfo);
@@ -859,4 +945,12 @@ void dir_process(int client_fd, struct stat stat_buf,char *method, char *path){
 			exit(0);
 		}
 	}
+}
+
+int http_check(char *http){
+	if(strcmp(http,"") == 0)
+		strcpy(http,"HTTP/1.0");
+	if(strcmp(http,"HTTP/1.0") != 0 && strcmp(http,"HTTP/1.1") != 0)
+		return 0;
+	return 1;
 }

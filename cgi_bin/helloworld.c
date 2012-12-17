@@ -1,9 +1,20 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 int main(int argc, char **argv){
+	printf("Content-Type:text/html\n\n");
+		
+	char *temp = NULL;
+	printf("<HTML>\n");
+	if((temp = getenv("QUERY_STRING")) == NULL){
+		printf("QUERY_STRING is not set\n");
+		temp = "no env is set";	
+	}
+
+	printf("%s\n",temp);
 	int b = 1234;
 	printf("%d\n",b);
-	printf("%s\n",argv[1]);
+	printf("</HTML>\n");
 	return 0;
 
 }
